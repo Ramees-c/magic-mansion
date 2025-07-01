@@ -37,6 +37,7 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/control.css" />
   </head>
+
   <body>
     <div class="preloader">
       <div class="loader"></div>
@@ -54,7 +55,7 @@
                 >
                   <a class="navbar-brand" href="#"
                     ><img
-                      class="nav-logo"
+                      class="nav-logo d-block d-xl-none"
                       src="assets/images/logo/logo-full-white.png"
                       alt="real estate template"
                   /></a>
@@ -76,24 +77,34 @@
                     class="collapse navbar-collapse"
                     id="navbarSupportedContent"
                   >
-                    <ul class="navbar-nav ms-auto">
+                    <ul
+                      class="navbar-nav d-flex align-items-center justify-content-center mx-auto"
+                    >
                       <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link me-4" href="#">Home</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#">About Us</a>
+                        <a class="nav-link me-4" href="#">About Us</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="#">Properties</a>
                       </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Services</a>
+                      <li class="d-none d-xl-block mx-5">
+                        <a class="navbar-brand" href="#"
+                          ><img
+                            class="nav-logo"
+                            src="assets/images/logo/logo-full-white.png"
+                            alt="real estate template"
+                        /></a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#">Blogs</a>
+                        <a class="nav-link me-4" href="#">Services</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#">Contact Us</a>
+                        <a class="nav-link me-4" href="#">Blogs</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link me-4" href="#">Contact Us</a>
                       </li>
                     </ul>
                   </div>
@@ -105,7 +116,7 @@
       </header>
       <!--============== Header Section End ==============-->
       <!--============== Search Banner Start ==============-->
-      <div class="position-relative overflow-hidden">
+      <div class="position-relative">
         <!-- Background Video -->
         <video
           autoplay
@@ -133,7 +144,7 @@
                   Local Expertise. Global Standards. Your Property Partner in
                   Dubai.
                 </h1>
-                <span class="d-block fw-semibold mb-4 d-none d-md-block fs-6"
+                <span class="d-block mb-4 d-none d-md-block fs-6"
                   >With deep local knowledge and international service
                   standards, we help you find, invest in, and manage the perfect
                   property in Dubai. Whether you're a resident or a global
@@ -141,16 +152,35 @@
                   journey.</span
                 >
 
-                <form
+                <!-- <form
                   action="#"
                   class="p-4 rounded"
                   style="
-                    max-width: 900px;
+                    max-width: 1200px;
                     width: 100%;
-                    background: rgba(255, 255, 255, 0.1);
+                    background-color: white;
                   "
                 >
                   <div class="row g-2">
+                    <div class="col-md-2">
+                      <div class="position-relative">
+                        <i
+                          class="fa-solid fa-magnifying-glass position-absolute"
+                          style="
+                            left: 15px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            color: #aaa;
+                          "
+                        ></i>
+                        <input
+                          type="text"
+                          class="form-control ps-5"
+                          name="keyword"
+                          placeholder="Enter Keywords..."
+                        />
+                      </div>
+                    </div>
                     <div class="col-md-2">
                       <select class="form-select" aria-label="Select Area">
                         <option selected>Area</option>
@@ -185,30 +215,234 @@
                         <option>Available</option>
                       </select>
                     </div>
-                    <div class="col-md-4">
-                      <div class="position-relative">
-                        <i
-                          class="fa-solid fa-magnifying-glass position-absolute"
-                          style="
-                            left: 15px;
-                            top: 50%;
-                            transform: translateY(-50%);
-                            color: #aaa;
-                          "
-                        ></i>
-                        <input
-                          type="text"
-                          class="form-control ps-5"
-                          name="keyword"
-                          placeholder="Enter Keywords..."
-                        />
-                      </div>
+                    <div class="col-md-2">
+                      <select class="form-select" aria-label="Select Status">
+                        <option selected>Status</option>
+                        <option>For Sale</option>
+                        <option>For Rent</option>
+                        <option>Sold</option>
+                        <option>Rented</option>
+                        <option>Ready to Move</option>
+                        <option>Under Construction</option>
+                        <option>Available</option>
+                      </select>
                     </div>
+                    
                     <div class="col-md-2">
                       <button class="btn btn-primary w-100">Search</button>
                     </div>
                   </div>
-                </form>
+                </form> -->
+
+                <div
+                  class="container-fluid px-0"
+                  style="max-width: 1200px; position: relative"
+                >
+                  <div style="position: relative">
+                    <form action="#">
+                      <!-- Search Form -->
+                      <div class="p-4 rounded" style="background-color: white">
+                        <div class="row g-2">
+                          <div class="col-md-2">
+                            <div class="position-relative">
+                              <i
+                                class="fa-solid fa-magnifying-glass position-absolute"
+                                style="
+                                  left: 15px;
+                                  top: 50%;
+                                  transform: translateY(-50%);
+                                  color: #aaa;
+                                "
+                              ></i>
+                              <input
+                                type="text"
+                                class="form-control ps-5"
+                                name="keyword"
+                                placeholder="Enter Keywords..."
+                              />
+                            </div>
+                          </div>
+                          <div class="col-md-2">
+                            <select
+                              class="form-select"
+                              aria-label="Select Types"
+                            >
+                              <option selected>Property Types</option>
+                              <option>Villa</option>
+                              <option>Appartment</option>
+                              <option>Townhouse</option>
+                              <option>Mansion</option>
+                              <option>Commercial</option>
+                            </select>
+                          </div>
+                          <div class="col-md-2">
+                            <select
+                              class="form-select"
+                              aria-label="Select Communities"
+                            >
+                              <option selected>Communities</option>
+                              <option>Business Bay</option>
+                              <option>Downtown</option>
+                              <option>Jumeirah</option>
+                              <option>Barsha</option>
+                              <option>Deira</option>
+                              <option>Bur Dubai</option>
+                              <option>Mirdif</option>
+                            </select>
+                          </div>
+                          <div class="col-md-2">
+                            <select
+                              class="form-select"
+                              aria-label="Select Bedrooms"
+                            >
+                              <option selected>Bedrooms</option>
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                              <option>6</option>
+                              <option>7</option>
+                            </select>
+                          </div>
+                          <div class="col-md-2 d-none d-md-block">
+                            <button
+                              class="d-flex justify-content-between align-items-center bg-white advanced-btn"
+                              style="
+                                font-size: 13px;
+                                min-height: 45px;
+                                padding: 10px;
+                                border: 1px solid #ddd;
+                                font-size: 14px;
+                                width: 100%;
+                              "
+                              type="button"
+                            >
+                              Advanced
+                              <i class="fas fa-ellipsis-v"></i>
+                            </button>
+                          </div>
+                          <div class="col-md-2">
+                            <button class="btn btn-primary w-100">
+                              Search
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Filter Section - Absolutely positioned below the form -->
+                      <div
+                        class="p-4 rounded mt-0 filter-section"
+                        style="
+                          background-color: white;
+                          border: 1px solid #eee;
+                          position: absolute;
+                          width: 100%;
+                          top: 100%;
+                          display: none;
+                          z-index: 1000;
+                          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                        "
+                      >
+                        <div class="row g-3">
+                          <div class="col-md-4">
+                            <select
+                              class="form-select"
+                              name="bedrooms"
+                              aria-label="Select Bedrooms"
+                            >
+                              <option selected>Bedrooms</option>
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                              <option>6</option>
+                              <option>7</option>
+                            </select>
+                          </div>
+                          <div class="col-md-4">
+                            <input
+                              type="text"
+                              class="form-control"
+                              name="minqft"
+                              placeholder="Min Sq. Ft"
+                            />
+                          </div>
+                          <div class="col-md-4">
+                            <input
+                              type="text"
+                              class="form-control"
+                              name="maxqft"
+                              placeholder="Max Sq. Ft"
+                            />
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-12">
+                            <h5 class="mb-3 text-start mt-5">
+                              Additional Options
+                            </h5>
+                          </div>
+                        </div>
+                        <ul class="row text-start">
+                          <li class="col-md-2 mb-3" style="gap: 100px">
+                            <input type="checkbox" />
+                            <label for="" class="text-black ms-2">Aldar</label>
+                          </li>
+                          <li class="col-md-2 mb-3" style="gap: 100px">
+                            <input type="checkbox" />
+                            <label for="" class="text-black ms-2">Aldar</label>
+                          </li>
+                          <li class="col-md-2 mb-3" style="gap: 100px">
+                            <input type="checkbox" />
+                            <label for="" class="text-black ms-2">Aldar</label>
+                          </li>
+                          <li class="col-md-2 mb-3" style="gap: 100px">
+                            <input type="checkbox" />
+                            <label for="" class="text-black ms-2">Aldar</label>
+                          </li>
+                          <li class="col-md-2 mb-3" style="gap: 100px">
+                            <input type="checkbox" />
+                            <label for="" class="text-black ms-2">Aldar</label>
+                          </li>
+                          <li class="col-md-2 mb-3" style="gap: 100px">
+                            <input type="checkbox" />
+                            <label for="" class="text-black ms-2">Aldar</label>
+                          </li>
+                          <li class="col-md-2 mb-3" style="gap: 100px">
+                            <input type="checkbox" />
+                            <label for="" class="text-black ms-2">Aldar</label>
+                          </li>
+                          <li class="col-md-2 mb-3" style="gap: 100px">
+                            <input type="checkbox" />
+                            <label for="" class="text-black ms-2">Aldar</label>
+                          </li>
+                          <li class="col-md-2 mb-3" style="gap: 100px">
+                            <input type="checkbox" />
+                            <label for="" class="text-black ms-2">Aldar</label>
+                          </li>
+                          <li class="col-md-2 mb-3" style="gap: 100px">
+                            <input type="checkbox" />
+                            <label for="" class="text-black ms-2">Aldar</label>
+                          </li>
+                          <li class="col-md-2 mb-3" style="gap: 100px">
+                            <input type="checkbox" />
+                            <label for="" class="text-black ms-2">Aldar</label>
+                          </li>
+                          <li class="col-md-2 mb-3" style="gap: 100px">
+                            <input type="checkbox" />
+                            <label for="" class="text-black ms-2">Aldar</label>
+                          </li>
+                          <li class="col-md-2 mb-3" style="gap: 100px">
+                            <input type="checkbox" />
+                            <label for="" class="text-black ms-2">Aldar</label>
+                          </li>
+                        </ul>
+                      </div>
+                    </form>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -218,7 +452,7 @@
       <!--============== Search Banner End ==============-->
 
       <!--============== About Us Section Start ==============-->
-      <div class="full-row">
+      <div class="full-row bg-brand">
         <div class="container">
           <div class="row">
             <div class="col-xl-6">
@@ -365,7 +599,7 @@
       </div>
       <!--============== About Us Section End ==============-->
 
-      <div class="full-row bg-light-gray">
+      <div class="full-row bg-brand">
         <div class="container">
           <div class="row row-cols-lg-2 row-cols-1 mb-4">
             <div class="col">
@@ -796,7 +1030,7 @@
       </div>
       <!--============== Property Category End ==============-->
 
-      <div class="full-row bg-white">
+      <div class="full-row bg-brand">
         <div class="container">
           <div class="row">
             <div class="col-xl-4 mb-5 mb-xl-0">
@@ -942,7 +1176,7 @@
                 </div>
                 <div class="col">
                   <div class="entry-wrapper">
-                   <div class="entry-thumbnail d-flex align-items-center">
+                    <div class="entry-thumbnail d-flex align-items-center">
                       <img
                         src="./assets/images/why-choose-icon.png"
                         alt=""
@@ -971,7 +1205,7 @@
       </div>
 
       <!--============== Testimonial Section Start ==============-->
-      <div class="full-row bg-light">
+      <div class="full-row bg-brand">
         <div class="container">
           <div class="row justify-content-center">
             <div class="col">
@@ -1115,7 +1349,7 @@
       <!--============== Testimonial Section End ==============-->
 
       <!--============== Blog Section Start ==============-->
-      <div class="full-row bg-light-gray">
+      <div class="full-row bg-brand">
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-lg-5">
@@ -1265,7 +1499,7 @@
       <!--=============== Blog Section End ===============-->
 
       <!--============== Client Logo Start ==============-->
-      <div class="full-row bg-white">
+      <div class="full-row bg-brand">
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-lg-5">
@@ -1287,35 +1521,35 @@
                       alt="Image not found!"
                   /></a>
                 </div>
-                 <div class="item bg-white">
+                <div class="item bg-white">
                   <a href="#"
                     ><img
                       src="assets/images/partner/logo-1.jpg"
                       alt="Image not found!"
                   /></a>
                 </div>
-                 <div class="item bg-white">
+                <div class="item bg-white">
                   <a href="#"
                     ><img
                       src="assets/images/partner/logo-1.jpg"
                       alt="Image not found!"
                   /></a>
                 </div>
-                 <div class="item bg-white">
+                <div class="item bg-white">
                   <a href="#"
                     ><img
                       src="assets/images/partner/logo-1.jpg"
                       alt="Image not found!"
                   /></a>
                 </div>
-                 <div class="item bg-white">
+                <div class="item bg-white">
                   <a href="#"
                     ><img
                       src="assets/images/partner/logo-1.jpg"
                       alt="Image not found!"
                   /></a>
                 </div>
-                 <div class="item bg-white">
+                <div class="item bg-white">
                   <a href="#"
                     ><img
                       src="assets/images/partner/logo-1.jpg"
@@ -1435,9 +1669,6 @@
       <!--============== Copyright Section End ==============-->
     </div>
 
-   
-
-    
     <!-- Scroll to top -->
     <div class="scroll-top-vertical xs-mx-none" id="scroll">
       Back to top <i class="ms-2 fa-solid fa-arrow-right-long"></i>
@@ -1473,6 +1704,29 @@
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
     </script>
-  </body>
 
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const advancedBtn = document.querySelector(".advanced-btn");
+        const filterSection = document.querySelector(".filter-section");
+
+        advancedBtn.addEventListener("click", function (e) {
+          e.preventDefault();
+          filterSection.style.display =
+            filterSection.style.display === "none" ? "block" : "none";
+        });
+
+        // Close when clicking outside
+        document.addEventListener("click", function (e) {
+          if (
+            !e.target.closest(".advanced-btn") &&
+            !e.target.closest(".filter-section") &&
+            filterSection.style.display === "block"
+          ) {
+            filterSection.style.display = "none";
+          }
+        });
+      });
+    </script>
+  </body>
 </html>
