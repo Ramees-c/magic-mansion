@@ -1235,8 +1235,8 @@ Header Style
 }
 
 .main-nav {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  /* padding-top: 10px; */
+  /* padding-bottom: 10px; */
   /* background: rgba(255, 255, 255, 0.1); */
 }
 
