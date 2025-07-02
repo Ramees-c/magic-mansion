@@ -557,10 +557,10 @@
   // Three Block Slide
   if ($three_item.length) {
     $three_item.owlCarousel({
-      loop: false,
+      loop: true,
       margin: 15,
       nav: true,
-      dots: true,
+      dots: false,
       smartSpeed: 500,
       autoplay: true,
       autoplayTimeout: 3000,
