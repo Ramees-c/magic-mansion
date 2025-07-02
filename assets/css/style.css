@@ -1616,6 +1616,10 @@ label {
   padding-right: 30px;
 }
 
+.form-select {
+  cursor: pointer;
+}
+
 .form-select,
 .form-control {
   border-radius: 2px;
