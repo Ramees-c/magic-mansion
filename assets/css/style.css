@@ -173,12 +173,12 @@ h6,
   /* font-family: var(--uc-accent-font); */
   font-family: "Mulish", sans-serif;
   color: var(--uc-dark-color);
-  font-weight: 700;
+  font-weight: 800;
 }
 
 h1,
 .h1 {
-  font-size: 44px;
+  font-size: 48px;
   line-height: 45px;
 }
 
@@ -1635,6 +1635,12 @@ label {
   /* color: var(--uc-default-color); */
   color: black;
   line-height: 1;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: none !important;
+  background-repeat: no-repeat;
+  background-position: right;
 }
 
 .form-select option,

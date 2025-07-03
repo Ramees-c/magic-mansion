@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- <meta name="description" content="Uniland - Real Estate HTML5 Template" /> -->
+    <meta name="description" content="Magic Mansion Real Estate" />
     <!-- <meta
       name="keywords"
       content="real estate, property, property search, agent, apartments, booking, business, idx, housing, real estate agency, rental"
@@ -78,33 +78,33 @@
                     id="navbarSupportedContent"
                   >
                     <ul
-                      class="navbar-nav d-flex align-items-start align-items-lg-center justify-content-center mx-auto"
+                      class="navbar-nav d-flex align-items-center align-items-lg-center justify-content-center mx-auto"
                     >
-                      <li class="nav-item">
-                        <a class="nav-link me-xl-4" href="#">Home</a>
+                      <li class="nav-item me-xl-4">
+                        <a class="nav-link" href="#">Home</a>
                       </li>
-                      <li class="nav-item">
-                        <a class="nav-link me-xl-4" href="#">About Us</a>
+                      <li class="nav-item me-xl-4">
+                        <a class="nav-link" href="#">About Us</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="#">Properties</a>
                       </li>
                       <li class="d-none d-xl-block mx-5">
-                        <a class="navbar-brand" href="#"
+                        <a href="#"
                           ><img
                             class="nav-logo"
                             src="assets/images/logo/logo-full-white.png"
                             alt="real estate template"
                         /></a>
                       </li>
-                      <li class="nav-item">
-                        <a class="nav-link me-xl-4" href="#">Services</a>
+                      <li class="nav-item me-xl-4">
+                        <a class="nav-link" href="#">Services</a>
+                      </li>
+                      <li class="nav-item me-xl-4">
+                        <a class="nav-link" href="#">Blogs</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link me-xl-4" href="#">Blogs</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link me-xl-4" href="#">Contact Us</a>
+                        <a class="nav-link" href="#">Contact Us</a>
                       </li>
                     </ul>
                   </div>
@@ -133,23 +133,30 @@
         <!-- Overlay content -->
         <div class="container position-relative" style="z-index: 1">
           <div class="row justify-content-center">
-            <div class="col-lg-10">
+            <div class="col-lg-12">
               <div
                 class="d-flex flex-column justify-content-center align-items-center text-center text-white"
                 style="height: 100vh; padding: 250px 0"
               >
-                <h1
-                  class="text-center mx-auto ls-2 color-white d-none d-md-block"
+                <div
+                  class="p-4 mb-3"
+                  style="background-color: rgba(0, 0, 0, 0.11)"
                 >
-                  Own More Grow More
-                </h1>
-                <span class="d-block mb-4 d-none d-md-block fs-6"
-                  >With deep local knowledge and international service
-                  standards, we help you find, invest in, and manage the perfect
-                  property in Dubai. Whether you're a resident or a global
-                  investor, we’re your trusted partner in every step of the
-                  journey.</span
-                >
+                  <h1
+                    class="text-center mx-auto ls-2 color-white d-none d-lg-block"
+                  >
+                    Own More Grow More
+                  </h1>
+                  <p
+                    class="d-block mb-4 d-none d-lg-block"
+                    style="font-size: 18px"
+                  >
+                    With deep local knowledge and global service standards, we
+                    help you find and invest in the right property in the UAE.
+                    Whether you're a resident or an international investor,
+                    we're your trusted partner every step of the way.
+                  </p>
+                </div>
 
                 <!-- <form
                   action="#"
@@ -235,7 +242,7 @@
 
                 <div
                   class="container-fluid px-0"
-                  style="max-width: 1200px; position: relative"
+                  style="max-width: 1400px; position: relative"
                 >
                   <div style="position: relative">
                     <form action="#">
@@ -244,18 +251,9 @@
                         <div class="row g-2">
                           <div class="col-md-2">
                             <div class="position-relative">
-                              <i
-                                class="fa-solid fa-magnifying-glass position-absolute"
-                                style="
-                                  left: 15px;
-                                  top: 50%;
-                                  transform: translateY(-50%);
-                                  color: #aaa;
-                                "
-                              ></i>
                               <input
                                 type="text"
-                                class="form-control ps-5"
+                                class="form-control"
                                 name="keyword"
                                 placeholder="Enter Keywords..."
                               />
@@ -1793,17 +1791,6 @@
           e.preventDefault();
           filterSection.style.display =
             filterSection.style.display === "none" ? "block" : "none";
-        });
-
-        // Close when clicking outside
-        document.addEventListener("click", function (e) {
-          if (
-            !e.target.closest(".advanced-btn") &&
-            !e.target.closest(".filter-section") &&
-            filterSection.style.display === "block"
-          ) {
-            filterSection.style.display = "none";
-          }
         });
       });
     </script>
