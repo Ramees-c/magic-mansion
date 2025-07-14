@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 /*===============================================================================
 ****CSS TABLE ****
@@ -71,7 +72,7 @@ Preloader
   width: 100vw;
   height: 100vh;
   z-index: 9999999;
-  background: #ede8d0;
+  background: #fff;
   top: 0;
   left: 0;
 }
@@ -150,8 +151,9 @@ li {
 }
 
 p {
-  line-height: 27px;
-  font-family: var(--uc-general-font);
+  line-height: 28px;
+  font-family: "Roboto", sans-serif;
+  font-size: 17px;
 }
 
 p:last-child {
@@ -190,8 +192,8 @@ h2,
 
 h3,
 .h3 {
-  font-size: 30px;
-  line-height: 35px;
+  font-size: 40px;
+  line-height: 43px;
 }
 
 h4,
@@ -798,10 +800,10 @@ Page Banner
 .page-title {
   /* font-family: var(--uc-primary-font); */
   font-family: "Mulish", sans-serif;
-  font-size: 18px;
+  font-size: 44px;
   text-transform: uppercase;
-  font-weight: 600;
-  color: var(--uc-dark-color);
+  font-weight: 800;
+  color: white;
   letter-spacing: 2px;
   margin-bottom: 0;
   line-height: initial;
@@ -861,6 +863,7 @@ Color Settings
 .bg-brand {
   background-color: #ede8d0;
 }
+
 .down-line:before,
 .bg-primary {
   background-color: var(--uc-primary-color) !important;
@@ -916,7 +919,6 @@ Color Settings
 .list-color-primary li,
 .list-color-primary li a {
   color: var(--uc-primary-color) !important;
-  
 }
 
 .color-secondary,
@@ -1859,6 +1861,10 @@ input::-webkit-input-placeholder,
   background-color: #f95e3b;
 }
 
+.pro-type-card {
+  background: #000;
+}
+
 .property-block .entry-header .badge .featured,
 .property-block .type .featured {
   background-color: #0e0e0e;
@@ -1925,7 +1931,7 @@ input::-webkit-input-placeholder,
 .property-block .listing-title a {
   font-weight: 600;
   color: var(--uc-dark-color);
-  font-size: 17px;
+  font-size: 15px;
   text-decoration: none;
   line-height: 30px;
   letter-spacing: 0.5px;
@@ -1980,10 +1986,10 @@ input::-webkit-input-placeholder,
 
 .property-grid-1 .listing-price {
   font-weight: 600;
-  color: var(--uc-primary-color);
+  color: #098409;
   display: flex;
   font-family: var(--uc-primary-font);
-  font-size: 20px;
+  font-size: 17px;
   align-items: center;
   gap: 5px;
   line-height: 1;
@@ -2011,7 +2017,7 @@ input::-webkit-input-placeholder,
   display: inline-block;
   width: 100%;
   font-size: 14px;
-  color: var(--uc-text-color2);
+  color: var(--uc-primary-color);
   line-height: 25px;
 }
 
@@ -3317,7 +3323,7 @@ input::-webkit-input-placeholder,
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
+  /* text-align: center; */
   padding: 35px;
   background-color: var(--uc-white-color);
   gap: 20px;
@@ -3326,13 +3332,14 @@ input::-webkit-input-placeholder,
 
 .box-hover-bottom-line .entry-title,
 .box-hover-bottom-line .entry-title a {
-  font-family: var(--uc-primary-font);
-  font-size: 16px;
+  font-family: "Mulish", sans-serif;
+  font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: var(--uc-dark-color);
   text-decoration: none;
   margin-bottom: 0;
+  text-align: center;
 }
 
 .box-hover-bottom-line .icon-box {
@@ -5183,9 +5190,10 @@ Tab Block Style
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
-  padding: 20px 50px;
+  padding: 10px 30px;
   background: #fff;
   border-radius: 60px;
+  border: 1px solid var(--uc-primary-color);
 }
 
 .tab-style-2 .tab-filter-nav li a.nav-link {
@@ -6097,8 +6105,8 @@ Single Property
 
 .ac-block .ac-title {
   padding: 10px 15px;
-  background-color: var(--uc-light-gray-color);
-  color: var(--uc-dark-color);
+  background-color: var(--uc-secondary-color);
+  color: var(--uc-white-color);
   font-family: var(--uc-primary-font);
   font-weight: 600;
   font-size: 16px;
@@ -8241,7 +8249,8 @@ Responsive Code
 
   .header-style-1.header-absolute {
     position: static;
-    background-color: var(--uc-secondary-color);
+    /* background-color: var(--uc-secondary-color); */
+    background-color: var(--uc-primary-color);
   }
 
   .header-style-3.header-absolute {
@@ -8310,6 +8319,14 @@ Responsive Code
 
   .left-sidebar-block {
     flex: 0 0 250px;
+  }
+
+  .agent-block-1.list-view .entry-wrapper {
+    flex-direction: column;
+  }
+
+  .agent-block-1.list-view .entry-thumbnail {
+    width: 100%;
   }
 }
 
