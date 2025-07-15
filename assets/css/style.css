@@ -222,6 +222,11 @@ small {
   font-size: 13px;
 }
 
+.custom-text {
+  font-size: 35px;
+  font-family: var(--uc-general-font);
+}
+
 blockquote {
   font-family: "Times New Roman";
   font-size: 18px;
@@ -8208,8 +8213,6 @@ Responsive Code
   .mobile-login {
     display: none;
   }
-
- 
 }
 
 @media screen and (max-width: 991px) {
@@ -8218,6 +8221,12 @@ Responsive Code
     gap: 10px;
     text-align: left;
     align-items: start;
+  }
+
+  h1,
+  .h1 {
+    font-size: 25px;
+    line-height: 35px;
   }
 
   h3,
@@ -8232,8 +8241,16 @@ Responsive Code
     line-height: 30px;
   }
 
+  .custom-text {
+    font-size: 17px;
+    font-family: var(--uc-general-font);
+  }
   .page-title {
     font-size: 30px;
+  }
+
+  .entry-single-title {
+    font-size: 18px;
   }
 
   .single-content-wrapper .property-info li {
