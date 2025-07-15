@@ -54,6 +54,58 @@
         filter: grayscale(100%);
         transition: filter 0.3s ease, transform 0.3s ease;
       }
+
+      .text-slider {
+        width: 100%;
+        overflow: hidden;
+        padding: 15px 0;
+        border-radius: 12px;
+        position: relative;
+      }
+
+      .slider-track {
+        display: flex;
+        white-space: nowrap;
+        animation: slideLeft 15s linear infinite;
+      }
+
+      .slide {
+        display: flex;
+        align-items: center;
+        margin-right: 60px;
+        font-size: 4rem;
+        font-weight: 800;
+        color: #aa8453;
+      }
+
+      .slide-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: #aa8453;
+        margin-left: 60px;
+        font-size: 3rem;
+      }
+
+      @keyframes slideLeft {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      @media (max-width: 767px) {
+        .slide {
+          font-size: 2rem;
+          margin-right: 30px;
+        }
+        .slide-icon {
+          margin-left: 30px;
+          font-size: 1.5rem;
+        }
+      }
     </style>
   </head>
 
@@ -177,88 +229,6 @@
                     we're your trusted partner every step of the way.
                   </p>
                 </div>
-
-                <!-- <form
-                  action="#"
-                  class="p-4 rounded"
-                  style="
-                    max-width: 1200px;
-                    width: 100%;
-                    background-color: white;
-                  "
-                >
-                  <div class="row g-2">
-                    <div class="col-md-2">
-                      <div class="position-relative">
-                        <i
-                          class="fa-solid fa-magnifying-glass position-absolute"
-                          style="
-                            left: 15px;
-                            top: 50%;
-                            transform: translateY(-50%);
-                            color: #aaa;
-                          "
-                        ></i>
-                        <input
-                          type="text"
-                          class="form-control ps-5"
-                          name="keyword"
-                          placeholder="Enter Keywords..."
-                        />
-                      </div>
-                    </div>
-                    <div class="col-md-2">
-                      <select class="form-select" aria-label="Select Area">
-                        <option selected>Area</option>
-                        <option>Business Bay</option>
-                        <option>Downtown</option>
-                        <option>Jumeirah</option>
-                        <option>Barsha</option>
-                        <option>Deira</option>
-                        <option>Bur Dubai</option>
-                        <option>Mirdif</option>
-                      </select>
-                    </div>
-                    <div class="col-md-2">
-                      <select class="form-select" aria-label="Select Type">
-                        <option selected>Types</option>
-                        <option>House</option>
-                        <option>Office</option>
-                        <option>Appartment</option>
-                        <option>Villa</option>
-                        <option>Single Room</option>
-                      </select>
-                    </div>
-                    <div class="col-md-2">
-                      <select class="form-select" aria-label="Select Status">
-                        <option selected>Status</option>
-                        <option>For Sale</option>
-                        <option>For Rent</option>
-                        <option>Sold</option>
-                        <option>Rented</option>
-                        <option>Ready to Move</option>
-                        <option>Under Construction</option>
-                        <option>Available</option>
-                      </select>
-                    </div>
-                    <div class="col-md-2">
-                      <select class="form-select" aria-label="Select Status">
-                        <option selected>Status</option>
-                        <option>For Sale</option>
-                        <option>For Rent</option>
-                        <option>Sold</option>
-                        <option>Rented</option>
-                        <option>Ready to Move</option>
-                        <option>Under Construction</option>
-                        <option>Available</option>
-                      </select>
-                    </div>
-                    
-                    <div class="col-md-2">
-                      <button class="btn btn-primary w-100">Search</button>
-                    </div>
-                  </div>
-                </form> -->
 
                 <div
                   class="container-fluid px-0"
@@ -567,7 +537,7 @@
                   <h3 class="color-dark ls-2 mb-4">
                     Find Your Dream Properties in Dubai
                   </h3>
-                  <p>
+                  <p style="text-align: justify">
                     Magic Mansion Real Estate is a full-service real estate
                     brokerage based in Dubai, UAE, specializing in connecting
                     clients with the right opportunities in the dynamic Dubai
@@ -653,8 +623,7 @@
             </div>
           </div>
           <div class="row row-cols-lg-4 row-cols-md-2 row-cols-1 g-3">
-            
-             <div class="col">
+            <div class="col">
               <div class="property-grid-1 property-block">
                 <div class="entry-wrapper">
                   <div class="entry-thumbnail hover-grayscale">
@@ -702,7 +671,7 @@
                 </div>
               </div>
             </div>
-             <div class="col">
+            <div class="col">
               <div class="property-grid-1 property-block">
                 <div class="entry-wrapper">
                   <div class="entry-thumbnail hover-grayscale">
@@ -750,7 +719,7 @@
                 </div>
               </div>
             </div>
-             <div class="col">
+            <div class="col">
               <div class="property-grid-1 property-block">
                 <div class="entry-wrapper">
                   <div class="entry-thumbnail hover-grayscale">
@@ -798,7 +767,7 @@
                 </div>
               </div>
             </div>
-             <div class="col">
+            <div class="col">
               <div class="property-grid-1 property-block">
                 <div class="entry-wrapper">
                   <div class="entry-thumbnail hover-grayscale">
@@ -846,7 +815,7 @@
                 </div>
               </div>
             </div>
-             <div class="col">
+            <div class="col">
               <div class="property-grid-1 property-block">
                 <div class="entry-wrapper">
                   <div class="entry-thumbnail hover-grayscale">
@@ -894,7 +863,7 @@
                 </div>
               </div>
             </div>
-             <div class="col">
+            <div class="col">
               <div class="property-grid-1 property-block">
                 <div class="entry-wrapper">
                   <div class="entry-thumbnail hover-grayscale">
@@ -942,7 +911,7 @@
                 </div>
               </div>
             </div>
-             <div class="col">
+            <div class="col">
               <div class="property-grid-1 property-block">
                 <div class="entry-wrapper">
                   <div class="entry-thumbnail hover-grayscale">
@@ -990,7 +959,7 @@
                 </div>
               </div>
             </div>
-             <div class="col">
+            <div class="col">
               <div class="property-grid-1 property-block">
                 <div class="entry-wrapper">
                   <div class="entry-thumbnail hover-grayscale">
@@ -1079,80 +1048,67 @@
             </div>
           </div>
           <div
-            class="row row-cols-lg-3 row-cols-sm-3 row-cols-1 g-2 justify-content-center"
+            class="row row-cols-lg-2 row-cols-sm-3 row-cols-1 g-2 justify-content-center"
           >
             <div class="col">
               <div class="box-link transation h-100">
                 <div class="box-70px position-relative">
-                  <img src="assets/images/icon/agent.png" alt="" />
+                  <img src="assets/images/icon/sale.png" alt="" />
                 </div>
                 <h6 class="box-title text-uppercase">
-                  Fully Registered Brokerage
+                  Residential Sales and Leasing
                 </h6>
-                <p>
-                  Preview listing of accommodation property living houses and
-                  hotels
+                <p style="text-align: justify">
+                  We assist clients in buying, selling, and leasing villas,
+                  apartments, penthouses, and townhouses across Dubai’s leading
+                  communities, providing personalized property recommendations
+                  aligned with lifestyle and investment objectives.
                 </p>
               </div>
             </div>
             <div class="col">
               <div class="box-link transation h-100">
                 <div class="box-70px position-relative">
-                  <img src="assets/images/icon/certified.png" alt="" />
+                  <img src="assets/images/icon/commercial.png" alt="" />
                 </div>
                 <h6 class="box-title text-uppercase">
-                  Experienced and Certified Agents
+                  Commercial Sales and Leasing
                 </h6>
-                <p>
-                  Our team of RERA-certified professionals brings deep market
-                  knowledge and a client-first approach to every transaction.
+                <p style="text-align: justify">
+                  We help businesses find the ideal offices, retail spaces, and
+                  warehouses that support operational efficiency, scalability,
+                  and long-term growth within Dubai’s most strategic and vibrant
+                  commercial hubs.
                 </p>
               </div>
             </div>
             <div class="col">
               <div class="box-link transation h-100">
                 <div class="box-70px position-relative">
-                  <img
-                    src="assets/images/icon/approch.png"
-                    alt=""
-                  />
-                </div>
-                <h6 class="box-title text-uppercase">Personalized Approach</h6>
-                <p>
-                  We take time to understand your goals and tailor solutions
-                  that align with your investment and lifestyle needs.
-                </p>
-              </div>
-            </div>
-            <div class="col">
-              <div class="box-link transation h-100">
-                <div class="box-70px position-relative">
-                  <img
-                    src="assets/images/icon/process.png"
-                    alt=""
-                  />
-                </div>
-                <h6 class="box-title text-uppercase">Transparent Processes</h6>
-                <p>
-                  We provide clear, straightforward guidance throughout your
-                  property journey, ensuring confidence and clarity.
-                </p>
-              </div>
-            </div>
-            <div class="col">
-              <div class="box-link transation h-100">
-                <div class="box-70px position-relative">
-                  <img
-                    src="assets/images/icon/global.png"
-                    alt=""
-                  />
+                  <img src="assets/images/icon/blueprint.png" alt="" />
                 </div>
                 <h6 class="box-title text-uppercase">
-                  Local Expertise, Global Standards
+                  Off-Plan Sales and Advisory
                 </h6>
-                <p>
-                  We blend in-depth local market insights with professional,
-                  ethical service aligned with global best practices.
+                <p style="text-align: justify">
+                  As authorized partners with Dubai’s top developers, we provide
+                  clients with priority access to exclusive off-plan launches,
+                  expert ROI analysis, and advisory services to help clients
+                  secure the best investment opportunities early.
+                </p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="box-link transation h-100">
+                <div class="box-70px position-relative">
+                  <img src="assets/images/icon/inversment.png" alt="" />
+                </div>
+                <h6 class="box-title text-uppercase">Investment Consultancy</h6>
+                <p style="text-align: justify">
+                  We provide market analysis, portfolio structuring, and
+                  personalized investment strategies for local and international
+                  investors looking to capitalize on Dubai’s stable and
+                  high-return real estate market.
                 </p>
               </div>
             </div>
@@ -1189,17 +1145,12 @@
                     </div>
                     <div class="entry-content">
                       <div class="entry-header">
-                        <h5 class="entry-title">
-                          Residential Sales and Leasing
-                        </h5>
+                        <h5 class="entry-title">Fully Registered Brokerage</h5>
                       </div>
                       <div class="entry-excerpt">
                         <p class="text-black fs-6" style="text-align: justify">
-                          We assist clients in buying, selling, and leasing
-                          villas, apartments, penthouses, and townhouses across
-                          Dubai’s leading communities, providing personalized
-                          property recommendations aligned with lifestyle and
-                          investment objectives.
+                          Preview listing of accommodation property living
+                          houses and hotels
                         </p>
                       </div>
                     </div>
@@ -1218,15 +1169,14 @@
                     <div class="entry-content">
                       <div class="entry-header">
                         <h5 class="entry-title">
-                          Commercial Sales and Leasing
+                          Experienced and Certified Agents
                         </h5>
                       </div>
                       <div class="entry-excerpt">
                         <p class="text-black fs-6" style="text-align: justify">
-                          We help businesses find the ideal offices, retail
-                          spaces, and warehouses that support operational
-                          efficiency, scalability, and long-term growth within
-                          Dubai’s most strategic and vibrant commercial hubs.
+                          Our team of RERA-certified professionals brings deep
+                          market knowledge and a client-first approach to every
+                          transaction.
                         </p>
                       </div>
                     </div>
@@ -1244,15 +1194,13 @@
                     </div>
                     <div class="entry-content">
                       <div class="entry-header">
-                        <h5 class="entry-title">Off-Plan Sales and Advisory</h5>
+                        <h5 class="entry-title">Personalized Approach</h5>
                       </div>
                       <div class="entry-excerpt">
                         <p class="text-black fs-6" style="text-align: justify">
-                          As authorized partners with Dubai’s top developers, we
-                          provide clients with priority access to exclusive
-                          off-plan launches, expert ROI analysis, and advisory
-                          services to help clients secure the best investment
-                          opportunities early.
+                          We take time to understand your goals and tailor
+                          solutions that align with your investment and
+                          lifestyle needs.
                         </p>
                       </div>
                     </div>
@@ -1270,14 +1218,63 @@
                     </div>
                     <div class="entry-content">
                       <div class="entry-header">
-                        <h5 class="entry-title">Investment Consultancy</h5>
+                        <h5 class="entry-title">Transparent Processes</h5>
                       </div>
                       <div class="entry-excerpt">
                         <p class="text-black fs-6" style="text-align: justify">
-                          We provide market analysis, portfolio structuring, and
-                          personalized investment strategies for local and
-                          international investors looking to capitalize on
-                          Dubai’s stable and high-return real estate market.
+                          We provide clear, straightforward guidance throughout
+                          your property journey, ensuring confidence and
+                          clarity.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="entry-wrapper">
+                    <div class="entry-thumbnail d-flex align-items-center">
+                      <img
+                        src="./assets/images/why-choose-icon.png"
+                        alt=""
+                        width="30px"
+                      />
+                      <span class="h3 down-line ms-3 pb-2 d-table">06</span>
+                    </div>
+                    <div class="entry-content">
+                      <div class="entry-header">
+                        <h5 class="entry-title">Trusted Expertise</h5>
+                      </div>
+                      <div class="entry-excerpt">
+                        <p class="text-black fs-6" style="text-align: justify">
+                          Trusted experts delivering personalized service,
+                          exclusive property access, and reliable advice across
+                          Dubai’s market.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="entry-wrapper">
+                    <div class="entry-thumbnail d-flex align-items-center">
+                      <img
+                        src="./assets/images/why-choose-icon.png"
+                        alt=""
+                        width="30px"
+                      />
+                      <span class="h3 down-line ms-3 pb-2 d-table">05</span>
+                    </div>
+                    <div class="entry-content">
+                      <div class="entry-header">
+                        <h5 class="entry-title">
+                          Local Expertise, Global Standards
+                        </h5>
+                      </div>
+                      <div class="entry-excerpt">
+                        <p class="text-black fs-6" style="text-align: justify">
+                          We blend in-depth local market insights with
+                          professional, ethical service aligned with global best
+                          practices.
                         </p>
                       </div>
                     </div>
@@ -1285,6 +1282,82 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="full-row pt-0">
+        <div class="text-slider">
+          <div class="slider-track">
+            <!-- 1st set -->
+            <div class="slide">
+              <span>Own More Grow More</span>
+              <div class="slide-icon"><i class="fa-regular fa-circle"></i></div>
+            </div>
+            <div class="slide">
+              <span>Own More Grow More</span>
+              <div class="slide-icon"><i class="fa-regular fa-circle"></i></div>
+            </div>
+            <div class="slide">
+              <span>Own More Grow More</span>
+              <div class="slide-icon"><i class="fa-regular fa-circle"></i></div>
+            </div>
+            <div class="slide">
+              <span>Own More Grow More</span>
+              <div class="slide-icon"><i class="fa-regular fa-circle"></i></div>
+            </div>
+            <div class="slide">
+              <span>Own More Grow More</span>
+              <div class="slide-icon"><i class="fa-regular fa-circle"></i></div>
+            </div>
+            <div class="slide">
+              <span>Own More Grow More</span>
+              <div class="slide-icon"><i class="fa-regular fa-circle"></i></div>
+            </div>
+            <div class="slide">
+              <span>Own More Grow More</span>
+              <div class="slide-icon"><i class="fa-regular fa-circle"></i></div>
+            </div>
+            <div class="slide">
+              <span>Own More Grow More</span>
+              <div class="slide-icon"><i class="fa-regular fa-circle"></i></div>
+            </div>
+            <div class="slide">
+              <span>Own More Grow More</span>
+              <div class="slide-icon"><i class="fa-regular fa-circle"></i></div>
+            </div>
+            <div class="slide">
+              <span>Own More Grow More</span>
+              <div class="slide-icon"><i class="fa-regular fa-circle"></i></div>
+            </div>
+            <div class="slide">
+              <span>Own More Grow More</span>
+              <div class="slide-icon"><i class="fa-regular fa-circle"></i></div>
+            </div>
+            <div class="slide">
+              <span>Own More Grow More</span>
+              <div class="slide-icon"><i class="fa-regular fa-circle"></i></div>
+            </div>
+            <div class="slide">
+              <span>Own More Grow More</span>
+              <div class="slide-icon"><i class="fa-regular fa-circle"></i></div>
+            </div>
+            <div class="slide">
+              <span>Own More Grow More</span>
+              <div class="slide-icon"><i class="fa-regular fa-circle"></i></div>
+            </div>
+            <div class="slide">
+              <span>Own More Grow More</span>
+              <div class="slide-icon"><i class="fa-regular fa-circle"></i></div>
+            </div>
+            <div class="slide">
+              <span>Own More Grow More</span>
+              <div class="slide-icon"><i class="fa-regular fa-circle"></i></div>
+            </div>
+            
+
+            
+           
           </div>
         </div>
       </div>
@@ -1447,46 +1520,17 @@
               </h3>
             </div>
           </div>
-          <div class="row row-cols-lg-4 row-cols-md-2 row-cols-1 g-3">
+          <div class="row row-cols-lg-3 row-cols-md-2 row-cols-1 g-3">
             <div class="col">
               <div class="post-block-1 entry-post">
                 <div class="entry-wrapper">
                   <div class="entry-thumbnail">
-                    <img
-                      src="assets/images/blog/1.jpg"
-                      alt="real estate template"
-                    />
-                  </div>
-                  <div class="entry-content-wrapper">
-                    <div class="entry-header">
-                      <div class="entry-title">
-                        <a
-                          href="blog-single.html"
-                          class="post-title"
-                          title="Benefits of Real Estate Template"
-                          >Lorem ipsum dolor sit amet consectetur</a
-                        >
-                      </div>
-                    </div>
-                    <div class="entry-content">
-                      <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit. Esse ducimus nihil est similique? Iste,
-                        blanditiis?
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="post-block-1 entry-post">
-                <div class="entry-wrapper">
-                  <div class="entry-thumbnail">
-                    <img
-                      src="assets/images/blog/1.jpg"
-                      alt="real estate template"
-                    />
+                    <a href="blog-single.html">
+                      <img
+                        src="assets/images/blog/1.jpg"
+                        alt="real estate template"
+                      />
+                    </a>
                   </div>
                   <div class="entry-content-wrapper">
                     <div class="entry-header">
@@ -1506,6 +1550,22 @@
                         blanditiis?
                       </p>
                     </div>
+                    <div
+                      class="d-flex justify-content-between align-items-center mt-2 border-top pt-3"
+                    >
+                      <div
+                        class="d-flex align-items-center justify-content-center gap-1"
+                      >
+                        <i
+                          class="fa-solid fa-calendar-days"
+                          style="color: #aa8453"
+                        ></i>
+                        <span>01-43-4343</span>
+                      </div>
+                      <a href="blog-single.html" class="blog-readmore"
+                        >Read More</a
+                      >
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1514,10 +1574,12 @@
               <div class="post-block-1 entry-post">
                 <div class="entry-wrapper">
                   <div class="entry-thumbnail">
-                    <img
-                      src="assets/images/blog/1.jpg"
-                      alt="real estate template"
-                    />
+                    <a href="blog-single.html">
+                      <img
+                        src="assets/images/blog/1.jpg"
+                        alt="real estate template"
+                      />
+                    </a>
                   </div>
                   <div class="entry-content-wrapper">
                     <div class="entry-header">
@@ -1537,6 +1599,22 @@
                         blanditiis?
                       </p>
                     </div>
+                    <div
+                      class="d-flex justify-content-between align-items-center mt-2 border-top pt-3"
+                    >
+                      <div
+                        class="d-flex align-items-center justify-content-center gap-1"
+                      >
+                        <i
+                          class="fa-solid fa-calendar-days"
+                          style="color: #aa8453"
+                        ></i>
+                        <span>01-43-4343</span>
+                      </div>
+                      <a href="blog-single.html" class="blog-readmore"
+                        >Read More</a
+                      >
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1545,10 +1623,12 @@
               <div class="post-block-1 entry-post">
                 <div class="entry-wrapper">
                   <div class="entry-thumbnail">
-                    <img
-                      src="assets/images/blog/1.jpg"
-                      alt="real estate template"
-                    />
+                    <a href="blog-single.html">
+                      <img
+                        src="assets/images/blog/1.jpg"
+                        alt="real estate template"
+                      />
+                    </a>
                   </div>
                   <div class="entry-content-wrapper">
                     <div class="entry-header">
@@ -1567,6 +1647,22 @@
                         elit. Esse ducimus nihil est similique? Iste,
                         blanditiis?
                       </p>
+                    </div>
+                    <div
+                      class="d-flex justify-content-between align-items-center mt-2 border-top pt-3"
+                    >
+                      <div
+                        class="d-flex align-items-center justify-content-center gap-1"
+                      >
+                        <i
+                          class="fa-solid fa-calendar-days"
+                          style="color: #aa8453"
+                        ></i>
+                        <span>01-43-4343</span>
+                      </div>
+                      <a href="blog-single.html" class="blog-readmore"
+                        >Read More</a
+                      >
                     </div>
                   </div>
                 </div>

@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 /*===============================================================================
 ****CSS TABLE ****
@@ -128,8 +128,7 @@ Default Style
 ==================================================================================*/
 body {
   font-size: 14px;
-  /* font-family: var(--uc-general-font); */
-  font-family: "Mulish", sans-serif;
+  font-family: var(--uc-general-font);
   font-weight: 400;
   line-height: normal;
   letter-spacing: 0;
@@ -172,8 +171,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  /* font-family: var(--uc-accent-font); */
-  font-family: "Mulish", sans-serif;
+  font-family: var(--uc-accent-font);
   color: var(--uc-dark-color);
   font-weight: 800;
 }
@@ -215,8 +213,7 @@ h6,
 }
 
 a {
-  /* font-family: var(--uc-accent-font); */
-  font-family: "Mulish", sans-serif;
+  font-family: var(--uc-accent-font);
   color: var(--uc-accent-color);
   text-decoration: none;
 }
@@ -330,8 +327,7 @@ blockquote {
 }
 
 .sub-title {
-  /* font-family: var(--uc-primary-font); */
-  font-family: "Mulish", sans-serif;
+  font-family: var(--uc-primary-font);
   font-size: 15px;
   font-weight: 500;
   letter-spacing: 1px;
@@ -798,8 +794,7 @@ Custom Webfont
 Page Banner
 ==========================================================*/
 .page-title {
-  /* font-family: var(--uc-primary-font); */
-  font-family: "Mulish", sans-serif;
+  font-family: var(--uc-primary-font);
   font-size: 44px;
   text-transform: uppercase;
   font-weight: 800;
@@ -836,8 +831,7 @@ Font Variations
 ==========================================================*/
 
 .font-primary {
-  /* font-family: var(--uc-primary-font); */
-  font-family: "Mulish", sans-serif;
+  font-family: var(--uc-primary-font);
 }
 
 .font-secondary {
@@ -1171,8 +1165,7 @@ Header Style
 
 .top-header ul li a,
 .top-header .navbar-top li a {
-  /* font-family: var(--uc-primary-font); */
-  font-family: "Mulish", sans-serif;
+  font-family: var(--uc-primary-font);
 
   font-size: 14px;
   letter-spacing: 1px;
@@ -1184,8 +1177,7 @@ Header Style
 }
 
 .navbar .navbar-nav li a {
-  /* font-family: var(--uc-primary-font); */
-  font-family: "Mulish", sans-serif;
+  font-family: var(--uc-primary-font);
   font-size: 19px;
   font-weight: 500;
   position: relative;
@@ -1369,8 +1361,7 @@ Layer Slider
 Button Style
 ==========================================================*/
 .btn {
-  /* font-family: var(--uc-accent-font); */
-  font-family: "Mulish", sans-serif;
+  font-family: var(--uc-accent-font);
   font-weight: 400;
   font-size: 14px;
   /*text-transform: uppercase;*/
@@ -1455,8 +1446,7 @@ Button Style
 }
 
 .btn-link {
-  /* font-family: var(--uc-accent-font); */
-  font-family: "Mulish", sans-serif;
+  font-family: var(--uc-accent-font);
   letter-spacing: 1px;
   font-weight: 600;
   text-decoration: none;
@@ -1486,8 +1476,7 @@ List Style
 
 .list-element li,
 .list-element li a {
-  /* font-family: var(--uc-accent-font); */
-  font-family: "Mulish", sans-serif;
+  font-family: var(--uc-accent-font);
   color: var(--uc-accent-color);
   list-style: none;
   text-decoration: none;
@@ -1552,8 +1541,7 @@ List Style
   margin-bottom: 10px;
   align-items: center;
   width: 100%;
-  /* font-family: var(--uc-primary-font); */
-  font-family: "Mulish", sans-serif;
+  font-family: var(--uc-primary-font);
   letter-spacing: 1px;
 }
 
@@ -1615,8 +1603,7 @@ label {
 .quick-search .form-control {
   font-size: 13px !important;
   color: var(--uc-default-color);
-  /* font-family: var(--uc-general-font); */
-  font-family: "Mulish", sans-serif;
+  font-family: var(--uc-general-font);
   padding: 0 15px;
   padding-right: 30px;
 }
@@ -1650,8 +1637,7 @@ label {
   font-size: 13px;
   argin-bottom: 0;
   color: black;
-  /* font-family: var(--uc-general-font); */
-  font-family: "Mulish", sans-serif;
+  font-family: var(--uc-general-font);
 }
 
 input::placeholder,
@@ -1662,8 +1648,7 @@ input::-webkit-input-placeholder,
   color: black;
   font-size: 13px;
   font-weight: 400;
-  /* font-family: var(--uc-general-font); */
-  font-family: "Mulish", sans-serif;
+  font-family: var(--uc-general-font);
 }
 
 .form-icon-right .icon-font,
@@ -1775,8 +1760,7 @@ input::-webkit-input-placeholder,
 .counter-style-2 .counter-num {
   color: var(--uc-white-color);
   font-size: 24px;
-  /* font-family: var(--uc-primary-font); */
-  font-family: "Mulish", sans-serif;
+  font-family: var(--uc-primary-font);
   font-weight: 600;
 }
 
@@ -3033,8 +3017,8 @@ input::-webkit-input-placeholder,
   text-transform: uppercase;
   color: var(--uc-dark-color);
   letter-spacing: 2px;
-  font-size: 15px;
-  font-weight: 700;
+  font-size: 18px;
+  font-weight: 800;
   margin: 0;
 }
 
@@ -3332,7 +3316,6 @@ input::-webkit-input-placeholder,
 
 .box-hover-bottom-line .entry-title,
 .box-hover-bottom-line .entry-title a {
-  font-family: "Mulish", sans-serif;
   font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -4082,7 +4065,7 @@ Hover Effect
 
 .post-block-1 .entry-content-wrapper {
   padding: 24px;
-  padding-bottom: 54px;
+  /* padding-bottom: 54px; */
 }
 
 .post-block-1 .entry-meta {
@@ -4761,6 +4744,10 @@ Hover Effect
 
 .blog-sidebar .widget {
   background-color: var(--uc-white-color);
+}
+
+.blog-readmore:hover {
+  color: black;
 }
 
 .widget_search .search-field {
@@ -8229,6 +8216,18 @@ Responsive Code
     gap: 10px;
     text-align: left;
     align-items: start;
+  }
+
+  h3,
+  .h3 {
+    font-size: 27px;
+    line-height: 33px;
+  }
+
+  h2,
+  .h2 {
+    font-size: 26px;
+    line-height: 30px;
   }
 
   .single-content-wrapper .property-info li {
