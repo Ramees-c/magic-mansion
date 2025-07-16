@@ -1,38 +1,6 @@
 (function ($) {
   "use strict";
 
-  /* Settings List Table
-	
-      * Cache jQuery Selector
-      * Parallax - START CODE
-      * Custom accordion useable settings for any type of accordion system
-      * Slider push menu visible
-      * MixIt-up tab calling
-      * Simple tab manus
-      * Auto active class adding with navigation
-      * Update Header Style + Scroll to Top
-      * Put slider space for nav not in mini screen
-      * dropdown submenu on hover in desktopand dropdown sub menu on click in mobile
-      * Layer Slider Testimonial
-      * Single Product Image Slide
-      * Click Search Icon and Open Search Field
-      * Scroll trgeted ID specially for One Page nav target scrolling
-      * Scroll top by clicking arrow up
-      * Fact Counter For Achivement Counting
-      * Our Partner Logos Slider Auto
-      * Testimonial slide
-      * Three Block Slide
-      * Four Block Slide
-      * Five Block Slide
-      * Single Text Carusel
-      * Contact Form Validation
-      * Elements Animation
-      * Start When document is Scrollig, do
-      * Date Counting
-      * Single Accordean
-	
-    */
-
   // Cache jQuery Selector
   var $window = $(window),
     $header = $("header"),
@@ -58,19 +26,6 @@
     handlePreloader();
   });
 
-  // Pricing bar Filter like index 7
-  if (document.querySelector(".filter_price") !== null) {
-    $(".filter_price").slider({
-      from: 0,
-      to: 1000000,
-      step: 1000,
-      smooth: true,
-      round: 0,
-      dimension: "$",
-      skin: "plastic",
-    });
-  }
-
   if (document.querySelector(".area_filter") !== null) {
     $(".area_filter").slider({
       from: 0,
@@ -80,25 +35,6 @@
       round: 0,
       dimension: "sq ft",
       skin: "plastic",
-    });
-  }
-
-  // Dashboard nvaigation icon
-  if (document.querySelector(".db-dropdown") !== null) {
-    $(".db-dropdown > .dropdown-toggle").on("click", function () {
-      $(this).parent(".db-dropdown").toggleClass("active");
-      $(this)
-        .parent(".db-dropdown")
-        .children(".db-dropdown-menu")
-        .slideToggle();
-    });
-  }
-
-  // Dashboard navigation collapse
-  if (document.querySelector(".collaps-dashboard") !== null) {
-    $(".collaps-dashboard").on("click", function () {
-      $(".dashboard-nav").toggleClass("active");
-      $(".dashboard-nav").slideToggle();
     });
   }
 
@@ -458,44 +394,6 @@
     return !1;
   });
 
-  // Fact Counter For Achivement Counting
-  function factCounter() {
-    if ($(".fact-counter").length) {
-      $(".fact-counter .count.animated").each(function () {
-        var $t = $(this),
-          n = $t.find(".count-num").attr("data-stop"),
-          r = parseInt($t.find(".count-num").attr("data-speed"), 10);
-
-        if (!$t.hasClass("counted")) {
-          $t.addClass("counted");
-          $({
-            countNum: $t.find(".count-text").text(),
-          }).animate(
-            {
-              countNum: n,
-            },
-            {
-              duration: r,
-              easing: "linear",
-              step: function () {
-                $t.find(".count-num").text(Math.floor(this.countNum));
-              },
-              complete: function () {
-                $t.find(".count-num").text(this.countNum);
-              },
-            }
-          );
-        }
-
-        //set skill building height
-        var size = $(this).children(".progress-bar").attr("aria-valuenow");
-        $(this)
-          .children(".progress-bar")
-          .css("width", size + "%");
-      });
-    }
-  }
-
   // Our Partner Logos Slider Auto
   if ($brand.length) {
     $brand.owlCarousel({
@@ -701,60 +599,6 @@
     });
   }
 
-  // Contact Form Validation
-  if ($contact.length) {
-    $contact.validate({
-      //#contact-form contact form id
-      rules: {
-        firstname: {
-          required: true, // Field name here
-        },
-        email: {
-          required: true, // Field name here
-          email: true,
-        },
-        subject: {
-          required: true,
-        },
-        message: {
-          required: true,
-        },
-      },
-
-      messages: {
-        firstname: "Please enter your First Name", //Write here your error message that you want to show in contact form
-        email: "Please enter valid Email", //Write here your error message that you want to show in contact form
-        subject: "Please enter your Subject", //Write here your error message that you want to show in contact form
-        message: "Please write your Message", //Write here your error message that you want to show in contact form
-      },
-
-      submitHandler: function (form) {
-        $("#send").attr({ disabled: "true", value: "Sending..." });
-        $.ajax({
-          type: "POST",
-          url: "email.php",
-          data: $(form).serialize(),
-          success: function () {
-            $("#send").removeAttr("disabled").attr("value", "Send");
-            $("#success").slideDown("slow");
-            setTimeout(function () {
-              $("#success").slideUp("slow");
-            }, 5000);
-            form.reset();
-          },
-          error: function () {
-            $("#send").removeAttr("disabled").attr("value", "Send");
-            $("#error").slideDown("slow");
-            setTimeout(function () {
-              $("#error").slideUp("slow");
-            }, 5000);
-          },
-        });
-        return false; // required to block normal submit since you used ajax
-      },
-    });
-  }
-
   // Elements Animation
   if ($(".wow").length) {
     var wow = new WOW({
@@ -767,25 +611,7 @@
     wow.init();
   }
 
-  // Start When document is Scrollig, do
-  $(window).on("scroll", function () {
-    factCounter();
-    //headerStyle();
-  });
-
-  // Date Counting
-  $("[data-countdown]").each(function () {
-    var $this = $(this),
-      finalDate = $(this).data("countdown");
-
-    $this.countdown(finalDate, function (event) {
-      $this.html(
-        event.strftime(
-          "<ul><li><span>%D</span>Day</li> <li><span>%H</span>Hour</li> <li><span>%M</span>Min</li> <li><span>%S</span>Sec</li></ul>"
-        )
-      );
-    });
-  });
+ 
 
   // Single Accordean
   var acc = document.getElementsByClassName("accordion");
