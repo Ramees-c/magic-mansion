@@ -100,10 +100,6 @@ body {
   overflow-x: hidden;
 }
 
-body {
-  background-color: #ede8d0;
-}
-
 /* Safari */
 @-webkit-keyframes spin {
   0% {
@@ -804,7 +800,9 @@ Color Settings
 .nav-hover-primary .navbar-nav li a:hover,
 .list-color-primary li,
 .list-color-primary li a {
-  color: var(--uc-primary-color) !important;
+  /* color: var(--uc-primary-color) !important; */
+  transform: scale(1.1);
+  font-weight: 800;
 }
 
 .color-secondary,
@@ -908,6 +906,8 @@ Header Style
   font-weight: 500;
   position: relative;
   letter-spacing: 0.5px;
+  display: inline-block;
+  transition: transform 0.4s ease;
 }
 
 .dropdown-item:focus,
@@ -2548,6 +2548,253 @@ input::-webkit-input-placeholder,
   color: var(--uc-dark-color);
 }
 
+/*==============================================================
+# Agent Block
+===============================================================*/
+.agent-block-1 {
+  background-color: var(--uc-white);
+}
+
+.agent-block-1 .entry-wrapper {
+  -moz-transition: all 300ms ease-in-out 0s;
+  -webkit-transition: all 300ms ease-in-out 0s;
+  transition: all 300ms ease-in-out 0s;
+}
+
+.agent-block-1.list-view .entry-wrapper {
+  flex-direction: row;
+}
+
+.agent-block-1.list-view .entry-thumbnail {
+  flex: 0 0 auto;
+  width: 40%;
+}
+
+.agent-block-1 .entry-wrapper:hover {
+  box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.agent-block-1 .agent-level {
+  position: absolute;
+  z-index: 10;
+  transform: rotate(-90deg);
+  top: 35px;
+  left: -34px;
+  width: 100px;
+  text-align: center;
+  background-color: var(--uc-primary-color);
+  letter-spacing: 2px;
+  font-size: 13px;
+  color: var(--uc-white-color);
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.agent-block-1 .entry-content-wrapper {
+  padding: 20px;
+  background-color: var(--uc-white-color);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.agent-block-1 .entry-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.agent-block-1 .entry-content ul {
+  margin-bottom: 0;
+}
+
+.agent-block-1.list-view .entry-content-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.agent-block-1 .join-date {
+  font-size: 13px;
+}
+
+.agent-block-1 .entry-rating {
+  padding: 0 8px;
+  position: relative;
+  width: max-content;
+  cursor: default;
+  background-color: var(--uc-primary-color);
+  color: var(--uc-white-color);
+  font-size: 11px;
+  line-height: 27px;
+  border-radius: 2px;
+}
+
+.agent-block-1 .entry-rating::before {
+  position: absolute;
+  content: "";
+  border: 5px solid;
+  border-color: transparent var(--uc-primary-color) transparent transparent;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.agent-block-1 .entry-title {
+  line-height: normal;
+}
+
+.agent-block-1 .entry-title a {
+  color: var(--uc-dark-color);
+  font-size: 17px;
+}
+
+.agent-block-1 .entry-content ul li {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  line-height: 28px;
+}
+
+.agent-block-1 .entry-content ul li i {
+  color: var(--uc-dark-color);
+  font-size: 15px;
+}
+
+.agent-block-1 .entry-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.agent-block-1 .social-media {
+  display: flex;
+  gap: 5px;
+}
+
+.agent-block-1 .social-media a {
+  border: 1px solid;
+  border-color: var(--uc-gray-color);
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  display: block;
+  border-radius: 5px;
+  color: var(--text-light-color);
+}
+
+.agent-block-1 .social-media a:hover {
+  background-color: var(--uc-primary-color);
+  border-color: var(--uc-primary-color);
+  color: var(--uc-white-color);
+}
+
+.agent-block-1.list-view .entry-footer {
+  margin-top: auto;
+}
+
+.agent-block-1 .entry-listed {
+  padding: 6px 10px;
+  background-color: var(--uc-light-color);
+  border-radius: 3px;
+  display: block;
+  font-size: 13px;
+  color: var(--uc-dark-color);
+  font-family: var(--uc-primary-font);
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.agent-block-3 .entry-wrapper {
+  background-color: var(--uc-white-color);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.agent-block-3 .entry-thumbnail {
+  width: 150px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  border: 3px solid #eee;
+  border-radius: 100%;
+  padding: 5px;
+}
+
+.agent-block-3 .entry-thumbnail .entry-thumbnail-image {
+  border-radius: 100%;
+}
+
+.agent-block-3 .entry-wrapper .entry-title,
+.agent-block-3 .entry-wrapper .entry-title a {
+  font-size: 17px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
+  color: var(--uc-dark-color);
+  margin-bottom: 0;
+}
+
+.agent-block-3 .agent-media {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.agent-block-3 .agent-media li {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 40px;
+  background-color: var(--uc-light-gray-color);
+  list-style: none;
+}
+
+.agent-block-3 .agent-media li a {
+  color: var(--uc-secondary-color);
+  font-size: 12px;
+  display: block;
+}
+
+.agent-block-3 .entry-footer .contact-agent {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.agent-block-3 .entry-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.agent-block-3 .entry-content-wrapper .agents-list {
+  line-height: 40px;
+  padding: 0 20px;
+  border-radius: 20px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: var(--uc-secondary-color);
+  color: var(--uc-white-color);
+}
+
+.agent-overview {
+  padding: 24px;
+  background-color: var(--uc-white-color);
+  margin-bottom: 20px;
+}
+
+.agent-listing {
+  padding: 24px;
+  background-color: var(--uc-white-color);
+}
+
 /*=======================================================
 # Box Style
 ========================================================*/
@@ -3805,7 +4052,7 @@ Hover Effect
   font-family: var(--uc-primary-font);
   font-weight: 400;
   letter-spacing: 0.5px;
-  font-size: 14px;
+  font-size: 15px;
   padding: 0;
 }
 
@@ -3864,7 +4111,7 @@ Hover Effect
 
 .social-widget li a,
 .social-widget a {
-  font-size: 14px;
+  font-size: 20px;
   text-decoration: none;
   color: var(--uc-dark-color);
 }
@@ -3872,8 +4119,14 @@ Hover Effect
 .footer-widget.social-widget li a,
 .footer-widget.social-widget a {
   color: var(--uc-white-color);
+  transition: transform 0.4s ease;
 }
 
+.footer-widget.social-widget li a,
+.footer-widget.social-widget a:hover {
+  color: var(--uc-primary-color);
+  transform: translateY(-10px);
+}
 .footer-light .footer-widget.social-widget li a,
 .footer-light .footer-widget.social-widget a {
   color: var(--uc-default-color);
