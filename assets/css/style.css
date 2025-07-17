@@ -4444,7 +4444,7 @@ Single Property
 }
 
 .entry-single-title {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 600;
   letter-spacing: 2px;
   color: var(--uc-dark-color);
@@ -5228,6 +5228,10 @@ Responsive Code
     right: 50%;
     transform: translateX(50%);
     bottom: -50px;
+  }
+
+    .entry-single-title {
+    font-size: 15px;
   }
 }
 
