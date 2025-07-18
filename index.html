@@ -107,6 +107,22 @@
         }
       }
     </style>
+
+    <style>
+      .partner-slider .item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 120px; /* Adjust based on your design */
+        padding: 10px;
+      }
+
+      .partner-slider .item img {
+        max-height: 100%;
+        max-width: 100%;
+        object-fit: contain;
+      }
+    </style>
   </head>
 
   <body>
@@ -127,7 +143,7 @@
       <img src="assets/images/icon/call.png" alt="Call" />
     </a>
 
-    <div id="page_wrapper" class="bg-light-gray">
+    <div id="page_wrapper">
       <!--============== Header Section Start ==============-->
       <header class="main-header header-style-1 header-absolute">
         <div class="main-nav">
@@ -534,13 +550,15 @@
       <!--============== About Us Section Start ==============-->
       <div class="full-row">
         <div class="container">
-          <div class="row">
-            <div class="col-xl-6 mb-5 mb-xl-0">
+          <div
+            class="row justify-content-lg-start justify-content-xl-center align-items-center"
+          >
+            <div class="col-xxl-4 col-xl-5 col-lg-4 mb-5 mb-xl-0">
               <div class="about-us-img-wrap position-relative">
                 <img src="assets/images/real-estate-template-13.jpg" alt="" />
               </div>
             </div>
-            <div class="col-xl-6">
+            <div class="col-xl-7">
               <div class="row mb-4">
                 <div class="col-12">
                   <span
@@ -550,7 +568,7 @@
                   <h3 class="color-dark ls-2 mb-4">
                     Find Your Dream Properties in Dubai
                   </h3>
-                  <p style="text-align: justify">
+                  <p>
                     Magic Mansion Real Estate is a full-service real estate
                     brokerage based in Dubai, UAE, specializing in connecting
                     clients with the right opportunities in the dynamic Dubai
@@ -571,7 +589,7 @@
                   </p>
                 </div>
               </div>
-              <div class="row" style="margin-top: 70px">
+              <div class="row">
                 <div class="col">
                   <a
                     href="about.html"
@@ -586,7 +604,7 @@
       </div>
       <!--============== About Us Section End ==============-->
 
-      <div class="full-row bg-light">
+      <div class="full-row">
         <div class="container">
           <div class="row row-cols-lg-2 row-cols-1 mb-4">
             <div class="col">
@@ -1031,7 +1049,7 @@
                 <h6 class="box-title text-uppercase">
                   Residential Sales and Leasing
                 </h6>
-                <p style="text-align: justify">
+                <p>
                   We assist clients in buying, selling, and leasing villas,
                   apartments, penthouses, and townhouses across Dubai’s leading
                   communities, providing personalized property recommendations
@@ -1047,7 +1065,7 @@
                 <h6 class="box-title text-uppercase">
                   Commercial Sales and Leasing
                 </h6>
-                <p style="text-align: justify">
+                <p>
                   We help businesses find the ideal offices, retail spaces, and
                   warehouses that support operational efficiency, scalability,
                   and long-term growth within Dubai’s most strategic and vibrant
@@ -1063,7 +1081,7 @@
                 <h6 class="box-title text-uppercase">
                   Off-Plan Sales and Advisory
                 </h6>
-                <p style="text-align: justify">
+                <p>
                   As authorized partners with Dubai’s top developers, we provide
                   clients with priority access to exclusive off-plan launches,
                   expert ROI analysis, and advisory services to help clients
@@ -1077,7 +1095,7 @@
                   <img src="assets/images/icon/inversment.png" alt="" />
                 </div>
                 <h6 class="box-title text-uppercase">Investment Consultancy</h6>
-                <p style="text-align: justify">
+                <p>
                   We provide market analysis, portfolio structuring, and
                   personalized investment strategies for local and international
                   investors looking to capitalize on Dubai’s stable and
@@ -1093,9 +1111,9 @@
       <div class="full-row">
         <div class="container">
           <div class="row">
-            <div class="col-xl-4 mb-5 mb-xl-0">
+            <div class="col-xl-4 col-lg-4 col-md-4 mb-5 mb-xl-0">
               <span class="tagline-2">What Sets Us Apart</span>
-              <h3 class="mb-4 fs-1">Why Choose Magic Mansion?</h3>
+              <h3 class="mb-4 fs-3">Why Choose Magic Mansion?</h3>
               <div>
                 <img
                   src="https://images.unsplash.com/photo-1612873649383-edf91f1cf7fe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nzh8fGR1YmFpJTIwY2l0eXxlbnwwfHwwfHx8MA%3D%3D"
@@ -1104,9 +1122,9 @@
               </div>
             </div>
 
-            <div class="col-xl-8">
-              <div class="row row-cols-md-2 row-cols-1 g-5">
-                <div class="col">
+            <div class="col-xl-8 col-lg-8 col-md-8">
+              <div class="row justify-content-center align-items-center">
+                <div class="col-xl-6 col-lg-12 why-choose-box">
                   <div class="entry-wrapper">
                     <div class="entry-thumbnail d-flex align-items-center">
                       <img
@@ -1120,7 +1138,7 @@
                         <h5 class="entry-title">Fully Registered Brokerage</h5>
                       </div>
                       <div class="entry-excerpt">
-                        <p class="text-black fs-6" style="text-align: justify">
+                        <p class="text-black fs-6">
                           Preview listing of accommodation property living
                           houses and hotels
                         </p>
@@ -1128,7 +1146,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col">
+                <div class="col-xl-6 col-lg-12 why-choose-box">
                   <div class="entry-wrapper">
                     <div class="entry-thumbnail d-flex align-items-center">
                       <img
@@ -1144,7 +1162,7 @@
                         </h5>
                       </div>
                       <div class="entry-excerpt">
-                        <p class="text-black fs-6" style="text-align: justify">
+                        <p class="text-black fs-6">
                           Our team of RERA-certified professionals brings deep
                           market knowledge and a client-first approach to every
                           transaction.
@@ -1153,7 +1171,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col">
+                <div class="col-xl-6 col-lg-12 why-choose-box">
                   <div class="entry-wrapper">
                     <div class="entry-thumbnail d-flex align-items-center">
                       <img
@@ -1167,7 +1185,7 @@
                         <h5 class="entry-title">Personalized Approach</h5>
                       </div>
                       <div class="entry-excerpt">
-                        <p class="text-black fs-6" style="text-align: justify">
+                        <p class="text-black fs-6">
                           We take time to understand your goals and tailor
                           solutions that align with your investment and
                           lifestyle needs.
@@ -1176,7 +1194,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col">
+                <div class="col-xl-6 col-lg-12 why-choose-box">
                   <div class="entry-wrapper">
                     <div class="entry-thumbnail d-flex align-items-center">
                       <img
@@ -1190,7 +1208,7 @@
                         <h5 class="entry-title">Transparent Processes</h5>
                       </div>
                       <div class="entry-excerpt">
-                        <p class="text-black fs-6" style="text-align: justify">
+                        <p class="text-black fs-6">
                           We provide clear, straightforward guidance throughout
                           your property journey, ensuring confidence and
                           clarity.
@@ -1199,7 +1217,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col">
+                <div class="col-xl-6 col-lg-12 why-choose-box">
                   <div class="entry-wrapper">
                     <div class="entry-thumbnail d-flex align-items-center">
                       <img
@@ -1213,7 +1231,7 @@
                         <h5 class="entry-title">Trusted Expertise</h5>
                       </div>
                       <div class="entry-excerpt">
-                        <p class="text-black fs-6" style="text-align: justify">
+                        <p class="text-black fs-6">
                           Trusted experts delivering personalized service,
                           exclusive property access, and reliable advice across
                           Dubai’s market.
@@ -1222,7 +1240,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col">
+                <div class="col-xl-6 col-lg-12 why-choose-box">
                   <div class="entry-wrapper">
                     <div class="entry-thumbnail d-flex align-items-center">
                       <img
@@ -1238,7 +1256,7 @@
                         </h5>
                       </div>
                       <div class="entry-excerpt">
-                        <p class="text-black fs-6" style="text-align: justify">
+                        <p class="text-black fs-6">
                           We blend in-depth local market insights with
                           professional, ethical service aligned with global best
                           practices.
@@ -1326,7 +1344,7 @@
       </div>
 
       <!--============== Testimonial Section Start ==============-->
-      <div class="full-row bg-light">
+      <div class="full-row">
         <div class="container">
           <div class="row justify-content-center">
             <div class="col">
@@ -1344,7 +1362,7 @@
               <div class="owl-carousel 3block-carusel owl-outer-20 nav-disable">
                 <div class="item">
                   <div
-                    class="testimonial-block-1 bg-white transation h-100 hover-underline-animation"
+                    class="testimonial-block-1 transation h-100 hover-underline-animation"
                   >
                     <div class="quote-icon">
                       <img src="assets/images/left-quote.png" alt="" />
@@ -1374,7 +1392,7 @@
                 </div>
                 <div class="item">
                   <div
-                    class="testimonial-block-1 bg-white transation h-100 hover-underline-animation"
+                    class="testimonial-block-1 transation h-100 hover-underline-animation"
                   >
                     <div class="quote-icon">
                       <img src="assets/images/left-quote.png" alt="" />
@@ -1404,7 +1422,7 @@
                 </div>
                 <div class="item">
                   <div
-                    class="testimonial-block-1 bg-white transation h-100 hover-underline-animation"
+                    class="testimonial-block-1 transation h-100 hover-underline-animation"
                   >
                     <div class="quote-icon">
                       <img src="assets/images/left-quote.png" alt="" />
@@ -1434,7 +1452,7 @@
                 </div>
                 <div class="item">
                   <div
-                    class="testimonial-block-1 bg-white transation h-100 hover-underline-animation"
+                    class="testimonial-block-1 transation h-100 hover-underline-animation"
                   >
                     <div class="quote-icon">
                       <img src="assets/images/left-quote.png" alt="" />
@@ -1470,7 +1488,7 @@
       <!--============== Testimonial Section End ==============-->
 
       <!--============== Blog Section Start ==============-->
-      <div class="full-row pt-0 bg-light">
+      <div class="full-row pt-0">
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-lg-5">
@@ -1657,65 +1675,51 @@
               </h3>
             </div>
           </div>
-          <div class="row align-items-center">
-            <div class="col-3 col-md-2 mb-4">
-              <div class="client-logo">
-                <img src="./assets/images/partner/logo-1.jpg" alt="Client 1" />
-              </div>
-            </div>
-            <div class="col-3 col-md-2 mb-4">
-              <div class="client-logo">
-                <img src="./assets/images/partner/logo-1.jpg" alt="Client 2" />
-              </div>
-            </div>
-            <div class="col-3 col-md-2 mb-4">
-              <div class="client-logo">
-                <img src="./assets/images/partner/logo-1.jpg" alt="Client 3" />
-              </div>
-            </div>
-            <div class="col-3 col-md-2 mb-4">
-              <div class="client-logo">
-                <img src="./assets/images/partner/logo-1.jpg" alt="Client 4" />
-              </div>
-            </div>
-            <div class="col-3 col-md-2 mb-4">
-              <div class="client-logo">
-                <img src="./assets/images/partner/logo-1.jpg" alt="Client 4" />
-              </div>
-            </div>
-            <div class="col-3 col-md-2 mb-4">
-              <div class="client-logo">
-                <img src="./assets/images/partner/logo-1.jpg" alt="Client 4" />
-              </div>
-            </div>
-            <div class="col-3 col-md-2 mb-4">
-              <div class="client-logo">
-                <img src="./assets/images/partner/logo-1.jpg" alt="Client 4" />
-              </div>
-            </div>
-            <div class="col-3 col-md-2 mb-4">
-              <div class="client-logo">
-                <img src="./assets/images/partner/logo-1.jpg" alt="Client 4" />
-              </div>
-            </div>
-            <div class="col-3 col-md-2 mb-4">
-              <div class="client-logo">
-                <img src="./assets/images/partner/logo-1.jpg" alt="Client 4" />
-              </div>
-            </div>
-            <div class="col-3 col-md-2 mb-4">
-              <div class="client-logo">
-                <img src="./assets/images/partner/logo-1.jpg" alt="Client 4" />
-              </div>
-            </div>
-            <div class="col-3 col-md-2 mb-4">
-              <div class="client-logo">
-                <img src="./assets/images/partner/logo-1.jpg" alt="Client 4" />
-              </div>
-            </div>
-            <div class="col-3 col-md-2 mb-4">
-              <div class="client-logo">
-                <img src="./assets/images/partner/logo-1.jpg" alt="Client 4" />
+          <div class="row">
+            <div class="col">
+              <div class="owl-carousel partner-slider">
+                <div class="item bg-white">
+                  <a href="#"
+                    ><img
+                      src="assets/images/partner/logo-1.jpg"
+                      alt="Image not found!"
+                  /></a>
+                </div>
+                <div class="item bg-white">
+                  <a href="#"
+                    ><img
+                      src="assets/images/partner/logo-1.jpg"
+                      alt="Image not found!"
+                  /></a>
+                </div>
+                <div class="item bg-white">
+                  <a href="#"
+                    ><img
+                      src="assets/images/partner/logo-1.jpg"
+                      alt="Image not found!"
+                  /></a>
+                </div>
+                <div class="item bg-white">
+                  <a href="#"
+                    ><img
+                      src="assets/images/partner/logo-1.jpg"
+                      alt="Image not found!"
+                  /></a>
+                </div>
+                <div class="item bg-white">
+                  <a href="#"
+                    ><img
+                      src="assets/images/partner/logo-1.jpg"
+                      alt="Image not found!"
+                  /></a>
+                </div>
+                <div class="item bg-white">
+                  <a href="#"
+                    ><img
+                      src="assets/images/partner/logo-1.jpg"
+                      alt="Image not found!"
+                  /></a>
+                </div>
               </div>
             </div>
           </div>
@@ -1737,13 +1741,14 @@
                   /></a>
                 </div>
                 <p style="font-size: 14px">
-                  Our mission as a Dubai-based real estate company is to deliver
-                  exceptional services rooted in transparency, seamlessly
-                  connecting buyers, sellers, and investors with the properties
-                  that meet their goals and aspirations.
+                  Our mission is to deliver exceptional, transparent real estate
+                  services that connect buyers, sellers, and investors with
+                  properties aligned to their goals.
                 </p>
               </div>
+              <h3 class="widget-title text-white">Follow Us</h3>
               <div class="widget footer-widget social-widget">
+                
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a>
                 <a
@@ -1764,10 +1769,10 @@
                     Second, <br />
                     Dubai, UAE
                   </li>
-                  <li><a href="tel:+971526780605">+971 52 678 0605</a></li>
+                  <li><a href="tel:+971526780605"><i class="fa-solid fa-phone" style="color: #aa8453;"></i> +971 52 678 0605</a></li>
                   <li>
                     <a href="mailto:admin@magicmansion.ae"
-                      >admin@magicmansion.ae</a
+                      ><i class="fa-regular fa-envelope" style="color: #aa8453;"></i> admin@magicmansion.ae</a
                     >
                   </li>
                 </ul>
