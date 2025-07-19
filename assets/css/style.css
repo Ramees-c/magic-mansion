@@ -713,6 +713,7 @@ Page Banner
   letter-spacing: 2px;
   margin-bottom: 0;
   line-height: initial;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.599)
 }
 
 /*==========================================================
@@ -2958,6 +2959,13 @@ input::-webkit-input-placeholder,
   color: var(--uc-primary-color);
 }
 
+
+
+
+.inner-page-banner {
+  height: 60vh;
+}
+
 /*=======================================================
 # Box Style
 ========================================================*/
@@ -3546,7 +3554,7 @@ Hover Effect
 }
 
 .testimonial-block-1 {
-  padding: 35px;
+  padding: 20px;
   background-color: var(--uc-light-color);
   display: flex;
   flex-direction: column;
@@ -5225,13 +5233,16 @@ Responsive Code
   .box-layout {
     width: 85%;
   }
- 
+
+  .box-hover-bottom-line .entry-wrapper {
+    height: 500px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
   .box-hover-bottom-line .entry-wrapper {
-  height: 400px;
-}
+    height: 400px;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -5277,7 +5288,7 @@ Responsive Code
 
   h3,
   .h3 {
-    font-size: 25px;
+    font-size: 23px;
     line-height: 33px;
   }
 
@@ -5287,16 +5298,37 @@ Responsive Code
     line-height: 30px;
   }
 
+  p {
+    font-size: 14px;
+  }
+
   .page-title {
     font-size: 30px;
   }
 
   .member-block-1 {
-    padding: 5px;
+    padding: 10px;
+  }
+
+  .property-grid-1 .entry-content-wrapper {
+    padding: 10px;
+  }
+
+  .box-style-1 .entry-wrapper {
+    padding: 10px;
+  }
+
+  .post-block-1 .entry-content-wrapper {
+    padding: 10px;
+  }
+
+  .testimonial-block-1 {
+    padding: 10px;
   }
 
   .box-hover-bottom-line .entry-wrapper {
-    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   .entry-single-title {
     font-size: 18px;
@@ -5377,6 +5409,10 @@ Responsive Code
   .agent-block-1.list-view .entry-thumbnail {
     width: 100%;
   }
+
+  .inner-page-banner {
+  height: 40vh;
+}
 }
 
 @media screen and (max-width: 767px) {
@@ -5527,3 +5563,6 @@ Responsive Code
 .call-icon:hover {
   transform: scale(1.2);
 }
+
+
+
