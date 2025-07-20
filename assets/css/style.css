@@ -713,7 +713,7 @@ Page Banner
   letter-spacing: 2px;
   margin-bottom: 0;
   line-height: initial;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.599)
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.599);
 }
 
 /*==========================================================
@@ -777,7 +777,8 @@ Color Settings
 
 .bg-footer {
   /* background-color: #232528; */
-  background-color: rgba(0, 0, 0, 0.758);
+  /* background-color: rgba(0, 0, 0, 0.758); */
+  background-color: #3e3e3e;
 }
 
 .copyright {
@@ -2958,9 +2959,6 @@ input::-webkit-input-placeholder,
 .member-block-2 .entry-footer .agent-feedback {
   color: var(--uc-primary-color);
 }
-
-
-
 
 .inner-page-banner {
   height: 60vh;
@@ -5411,8 +5409,8 @@ Responsive Code
   }
 
   .inner-page-banner {
-  height: 40vh;
-}
+    height: 40vh;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -5546,7 +5544,7 @@ Responsive Code
   bottom: 100px;
   right: 30px;
   z-index: 1000;
-  background-color: rgba(0, 0, 0, 0.758);
+  background-color: var(--uc-dark-color);
   border-radius: 50%;
   padding: 15px;
   transition: transform 0.2s ease-in-out;
@@ -5563,6 +5561,3 @@ Responsive Code
 .call-icon:hover {
   transform: scale(1.2);
 }
-
-
-
