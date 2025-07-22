@@ -680,3 +680,12 @@
     $(".makeMeList").hide();
   });
 })(jQuery);
+
+
+// blog card paragraph slice
+document.addEventListener("DOMContentLoaded", function () {
+    const p = document.getElementById("short-paragraph");
+    const words = p.textContent.trim().split(" ");
+    const shortText = words.slice(0, 40).join(" ") + "...";
+    p.textContent = shortText;
+  });
