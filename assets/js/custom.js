@@ -38,44 +38,6 @@
     });
   }
 
-  // Block Show/hide option
-  if (document.querySelector(".toggle-btn") !== null) {
-    $(".toggle-btn").on("click", function (e) {
-      e.preventDefault();
-      var $this = $(this).attr("data-target");
-      $($this).toggleClass("visible");
-    });
-  }
-
-  // Data quick view
-  if (document.querySelector(".quick-view") !== null) {
-    $(".quick-view").on("click", function (e) {
-      e.preventDefault();
-      var target = $(this).attr("href");
-      $("body").addClass("modal-open");
-      $("body").css("padding-right", "17px");
-      $(target).show();
-      $(target).addClass("show");
-      e.stopPropagation();
-    });
-
-    $(".view-close").on("click", function () {
-      $("body").removeClass("modal-open");
-      $("body").css("padding-right", "0");
-      $(this).parents(".quick-view-modal").removeClass("show");
-      $(this).parents(".quick-view-modal").hide();
-    });
-
-    $(".quick-view-modal").on("click", function (e) {
-      if ($(e.target).closest(".modal-dialog").length === 0) {
-        $("body").removeClass("modal-open");
-        $("body").css("padding-right", "0");
-        $(this).removeClass("show");
-        $(this).hide();
-      }
-    });
-  }
-
   // Parallax - START CODE
   if ($(".paraxify").length) {
     $(function () {
@@ -126,273 +88,11 @@
     });
   }
 
-  // Slider push menu visible
-  if (document.querySelector(".push-nav-toggle") !== null) {
-    var $this = $(".push-nav-toggle"),
-      $close = $(".slide-nav-close"),
-      $sidenav = $(
-        ".nav-leftpush-overlay .navbar-expand-lg .navbar-slide-push"
-      );
-
-    $this.on("click", function (event) {
-      event.preventDefault();
-      $sidenav.addClass("visible");
-      $("#page_wrapper").addClass("overlay");
-      event.stopPropagation();
-    });
-
-    $sidenav.on("click", function (event) {
-      event.stopPropagation();
-    });
-
-    $window.on("click", function (e) {
-      $sidenav.removeClass("visible");
-      $("#page_wrapper").removeClass("overlay");
-    });
-
-    $close.on("click", function (e) {
-      $sidenav.removeClass("visible");
-      $("#page_wrapper").removeClass("overlay");
-    });
-  }
-
   // MixIt-up tab calling
   if ($mix_tab.length) {
     var containerEl = document.querySelector(".mix-element");
     var mixer = mixitup(containerEl);
   }
-
-  //bootstrap selectpiker
-  //$(function() {
-  //    $('.selectpicker').selectpicker();
-  //});
-
-  // Simple tab manus
-  $(function () {
-    // default action
-    $(".tab-element .tab-pane").hide();
-    $(".tab-action ul li:first-child").addClass("active");
-    $(".tab-element .tab-pane:first-child").show();
-
-    // on click event
-    $(".tab-action ul li").on("click", function () {
-      $(this).parent("ul").children("li").removeClass("active");
-      $(this).addClass("active");
-      $(this).parent("ul").next(".tab-element").children(".tab-pane").hide();
-      var activeTab = $(this).attr("data-target");
-      $(activeTab).fadeIn();
-      return false;
-    });
-  });
-
-  // Auto active class adding with navigation
-  $window.on("load", function () {
-    var current = location.pathname;
-    var $path = current.substring(current.lastIndexOf("/") + 1);
-    $("#navbarSupportedContent li a").each(function (e) {
-      var $this = $(this);
-      // if the current path is like this link, make it active
-      if ($path == $this.attr("href")) {
-        $this.parent("li").addClass("active");
-      } else if ($path == "") {
-        $(".navbar-nav li:first-child").addClass("active");
-      }
-    });
-  });
-
-  // Update Header Style + Scroll to Top
-  // function headerStyle() {
-  //     if ($header.length) {
-  //         var windowpos = $window.scrollTop();
-  //         if (windowpos >= 200) {
-  //             $header.addClass('fixed-top');
-  //         } else {
-  //             $header.removeClass('fixed-top');
-  //         }
-  //    }
-  // }
-
-  // Put slider space for nav not in mini screen
-  if (document.querySelector(".nav-on-top") !== null) {
-    var get_height = jQuery(".nav-on-top").height();
-    if (get_height > 0 && $window.width() > 991) {
-      jQuery(".nav-on-top").next().css("margin-top", get_height);
-    }
-    $window.on("resize", function () {
-      $header.removeClass("fixed-top");
-      var get_height = jQuery(".nav-on-top").height();
-      if ($window.width() < 991) {
-        jQuery(".nav-on-top").next().css("margin-top", "0");
-      } else {
-        jQuery(".nav-on-top").next().css("margin-top", get_height);
-      }
-    });
-  }
-  if (document.querySelector(".nav-on-banner") !== null) {
-    var get_height = jQuery(".nav-on-banner").height();
-    if (get_height > 0 && $window.width() > 991) {
-      jQuery(".nav-on-banner").next().css("padding-top", get_height);
-    }
-    $window.on("resize", function () {
-      $header.removeClass("fixed-top");
-      var get_height = jQuery(".nav-on-banner").height();
-      if ($window.width() < 991) {
-        jQuery(".nav-on-banner").next().css("padding-top", "0");
-      } else {
-        jQuery(".nav-on-banner").next().css("padding-top", get_height);
-      }
-    });
-  }
-
-  // dropdown submenu on hover in desktopand dropdown sub menu on click in mobile
-  $navigation.each(function () {
-    $dropdown.on("click", function (e) {
-      if ($window.width() < 1100) {
-        if ($(this).parent(".dropdown").hasClass("visible")) {
-          $(this)
-            .parent(".dropdown")
-            .children(".dropdown-menu")
-            .first()
-            .stop(true, true)
-            .slideUp(300);
-          $(this).parent(".dropdown").removeClass("visible");
-          // window.location = $(this).attr('href');
-        } else {
-          e.preventDefault();
-          $(this)
-            .parent(".dropdown")
-            .siblings(".dropdown")
-            .children(".dropdown-menu")
-            .slideUp(300);
-          $(this)
-            .parent(".dropdown")
-            .siblings(".dropdown")
-            .removeClass("visible");
-          $(this).parent(".dropdown").children(".dropdown-menu").slideDown(300);
-          $(this).parent(".dropdown").addClass("visible");
-        }
-        e.stopPropagation();
-      }
-    });
-
-    $("body").on("click", function (e) {
-      $dropdown.parent(".dropdown").removeClass("visible");
-    });
-
-    $window.on("resize", function () {
-      if ($window.width() > 991) {
-        $(".dropdown-menu").removeAttr("style");
-        $(".dropdown ").removeClass("visible");
-      }
-    });
-  });
-
-  // Layer Slider Testimonial
-  if ($("#layer-testimonial").length) {
-    $(document).ready(function () {
-      $("#layer-testimonial").layerSlider({
-        sliderVersion: "6.0.0",
-        type: "fullwidth",
-        responsiveUnder: 1280,
-        maxRatio: 1,
-        slideBGSize: "auto",
-        hideUnder: 0,
-        hideOver: 100000,
-        skin: "noskin",
-        globalBGRepeat: "repeat",
-        globalBGAttachment: "fixed",
-        globalBGSize: "contain",
-        skinsPath: "assets/skins/",
-      });
-    });
-  }
-
-  // Single Product Image Slide
-  if (document.querySelector(".full-img-sweep") !== null) {
-    $(".full-img-sweep").layerSlider({
-      sliderVersion: "6.0.0",
-      responsiveUnder: 0,
-      layersContainer: 0,
-      slideBGSize: "auto",
-      autoStart: "false",
-      showCircleTimer: "false",
-      skin: "noskin",
-      thumbnailNavigation: "always",
-      skinsPath: "assets/skins/",
-    });
-  }
-
-  // Click Search Icon and Open Search Field
-  var $srcicon = $(".search-pop span"),
-    $srcfield = $(".search-form");
-  $srcicon.on("click", function (event) {
-    event.preventDefault();
-    $srcfield.addClass("visible");
-    event.stopPropagation();
-  });
-
-  $srcfield.on("click", function (event) {
-    event.stopPropagation();
-  });
-
-  $window.on("click", function (e) {
-    $srcfield.removeClass("visible");
-  });
-
-  // Scroll trgeted ID specially for One Page nav target scrolling
-  $('.one-page-nav a[href*="#"]')
-    .not('.one-page-nav [href="#"]')
-    .not('.one-page-nav [href="#0"]')
-    .click(function (event) {
-      if (
-        location.pathname.replace(/^\//, "") ==
-          this.pathname.replace(/^\//, "") &&
-        location.hostname == this.hostname
-      ) {
-        var target = $(this.hash);
-        target = target.length
-          ? target
-          : $("[name=" + this.hash.slice(1) + "]");
-        if (target.length) {
-          event.preventDefault();
-          $("html, body").animate(
-            {
-              scrollTop: target.offset().top,
-            },
-            1000,
-            function () {
-              var $target = $(target);
-              $target.focus();
-              if ($target.is(":focus")) {
-                // Checking if the target was focused
-                return false;
-              } else {
-                $target.attr("tabindex", "-1"); // Adding tabindex for elements not focusable
-                $target.focus(); // Set focus again
-              }
-            }
-          );
-        }
-      }
-    });
-
-  // Scroll top by clicking arrow up
-  $window.scroll(function () {
-    if ($(this).scrollTop() > 500) {
-      $("#scroll").fadeIn();
-    } else {
-      $("#scroll").fadeOut();
-    }
-  });
-  $("#scroll").click(function () {
-    $("html, body").animate(
-      {
-        scrollTop: 0,
-      },
-      100
-    );
-    return !1;
-  });
 
   // Our Partner Logos Slider Auto
   if ($brand.length) {
@@ -426,12 +126,12 @@
   // Testimonial slide
   if ($single_carusel.length) {
     $single_carusel.owlCarousel({
-      loop: false,
+      loop: true,
       margin: 15,
       nav: true,
       dots: true,
       smartSpeed: 500,
-      autoplay: false,
+      autoplay: true,
       responsive: {
         0: {
           items: 1,
@@ -611,8 +311,6 @@
     wow.init();
   }
 
- 
-
   // Single Accordean
   var acc = document.getElementsByClassName("accordion");
   var i;
@@ -632,60 +330,27 @@
       }
     });
   }
-
-  // Convert to list
-  $(function () {
-    $(".makeMeList").each(function (index, element) {
-      $(this)
-        .parent()
-        .after()
-        .append(
-          "<div class='scrollableList'><div class='selectedOption'></div><ul class='createdList'></ul><i class='fa-solid fa-sort'></i></div>"
-        );
-      var defaultTxt = $(this).children("option:first-child").text();
-
-      $(element).each(function (idx, elm) {
-        $("option", elm).each(function (id, el) {
-          $(".scrollableList ul:last").append("<li>" + el.text + "</li>");
-        });
-        $(".scrollableList ul").hide();
-        $(".makeMeUl").children("div.selectedOption").text(defaultTxt);
-      });
-      $(".scrollableList:last").children("div.selectedOption").text(defaultTxt);
-    });
-
-    $(".selectedOption").on("click", function (e) {
-      $(this).next("ul").slideToggle(200).toggleClass("open");
-      $(".selectedOption").not(this).next("ul").hide();
-      e.stopPropagation();
-    });
-
-    $("body").on("click", function (e) {
-      if ($(".createdList").hasClass("open")) {
-        $(".createdList").hide().removeClass("open");
-      }
-    });
-
-    $(".scrollableList ul li").on("click", function () {
-      var selectedLI = $(this).text();
-      var selectOption = $(".makeMeList");
-      $(this).parent().prev(".selectedOption").text(selectedLI);
-      selectOption
-        .children("option:contains(" + selectedLI + ")")
-        .attr("selected", "");
-      $(this).parent("ul").hide();
-    });
-
-    $(".scrollableList").show();
-    $(".makeMeList").hide();
-  });
 })(jQuery);
 
+// property single page sidebar
+const toggleBtn = document.getElementById("toggleSidebar");
+  const closeBtn = document.getElementById("closeSidebar");
+  const sidebar = document.getElementById("rightSidebar");
+  const overlay = document.getElementById("overlay");
 
-// blog card paragraph slice
-document.addEventListener("DOMContentLoaded", function () {
-    const p = document.getElementById("short-paragraph");
-    const words = p.textContent.trim().split(" ");
-    const shortText = words.slice(0, 40).join(" ") + "...";
-    p.textContent = shortText;
+  toggleBtn.addEventListener("click", () => {
+    sidebar.classList.add("open");
+    overlay.classList.add("show");
+    document.body.classList.add("no-scroll");
+    document.documentElement.classList.add("no-scroll");
   });
+
+  function closeSidebar() {
+    sidebar.classList.remove("open");
+    overlay.classList.remove("show");
+    document.body.classList.remove("no-scroll");
+    document.documentElement.classList.remove("no-scroll");
+  }
+
+  closeBtn.addEventListener("click", closeSidebar);
+  overlay.addEventListener("click", closeSidebar); // Clicking outside also closes

@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
 
+@font-face {
+  font-family: 'GroundControl';
+  src: url('../webfonts/GroundControl_FREE_FOR_PERSONAL_USE_ONLY.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /*==================================
 Font Variable
 ==================================*/
@@ -18,6 +25,7 @@ Font Variable
 
 :root {
   --uc-accent-font: "Mulish", sans-serif;
+  /* --uc-accent-font: "GroundControl", sans-serif; */
 }
 
 :root {
@@ -128,3 +136,5 @@ Theme Color All Codes Variable
 :root {
   --uc-dark-color-rgba: 24, 26, 29;
 }
+
+
