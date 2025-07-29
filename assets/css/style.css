@@ -1469,7 +1469,7 @@ input::-webkit-input-placeholder,
 .box-style-1 .entry-title a {
   text-transform: uppercase;
   color: var(--uc-dark-color);
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   font-size: 18px;
   font-weight: 800;
   margin: 0;
@@ -1631,7 +1631,7 @@ input::-webkit-input-placeholder,
   font-family: var(--uc-accent-font);
   font-size: 15px;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   color: var(--uc-dark-color);
   margin-bottom: 0;
   text-decoration: none;
@@ -1691,7 +1691,7 @@ input::-webkit-input-placeholder,
 .box-hover-bottom-line .entry-title a {
   font-size: 20px;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   color: var(--uc-dark-color);
   text-decoration: none;
   margin-bottom: 0;
@@ -2524,8 +2524,6 @@ table th {
   height: 450px;
 }
 
-
-
 /*=====================================================
 # Accordion
 *====================================================*/
@@ -2621,11 +2619,13 @@ table th {
 .sidebar .sidebar-list {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: auto;
+
   gap: 40px;
-  height: 70vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .sidebar .sidebar-list li a {
@@ -2680,6 +2680,13 @@ body.no-scroll {
 .property-menu-icon:hover {
   color: var(--uc-primary-color);
 }
+
+ .inner-page-banner {
+    transition: transform 0.2s ease;
+    will-change: transform;
+  }
+
+
 
 /*==========================================================
 Responsive Code

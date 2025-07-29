@@ -354,3 +354,6 @@ const toggleBtn = document.getElementById("toggleSidebar");
 
   closeBtn.addEventListener("click", closeSidebar);
   overlay.addEventListener("click", closeSidebar); // Clicking outside also closes
+
+
+  

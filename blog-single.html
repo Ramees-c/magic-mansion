@@ -289,7 +289,7 @@
       <!--=================== Page Content End ==================-->
 
       <!--============== Footer Section Start ==============-->
-     <footer
+      <footer
         class="full-row bg-footer overlay-dark"
         style="padding-bottom: 30px"
       >
@@ -508,5 +508,14 @@
     <script src="assets/js/wow.min.js"></script>
     <script src="assets/js/paraxify.js"></script>
     <script src="assets/js/custom.js"></script>
+
+    <script>
+      window.addEventListener("scroll", function () {
+        const banner = document.querySelector(".inner-page-banner");
+        const scrollY = window.scrollY;
+        const scale = 1 + scrollY * 0.0005; // adjust for smoothness
+        banner.style.transform = `scale(${scale})`;
+      });
+    </script>
   </body>
 </html>
