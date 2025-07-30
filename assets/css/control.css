@@ -32,6 +32,10 @@ Font Variable
   --uc-general-font: "Roboto", sans-serif;
 }
 
+:root {
+  --uc-brand-font: "GroundControl", sans-serif ;
+}
+
 /*==================================
 Theme Color All Codes Variable
 ==================================*/

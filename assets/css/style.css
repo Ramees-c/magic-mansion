@@ -285,6 +285,10 @@ img.nav-logo {
   flex-direction: column;
 }
 
+.brand-font {
+  font-family: var(--uc-brand-font);
+}
+
 /*=========================================================
 Custom Webfont
 =========================================================*/
