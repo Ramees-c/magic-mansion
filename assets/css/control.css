@@ -1,8 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
 
 @font-face {
-  font-family: 'GroundControl';
-  src: url('../webfonts/GroundControl_FREE_FOR_PERSONAL_USE_ONLY.ttf') format('truetype');
+  font-family: "GroundControl";
+  src: url("../webfonts/GroundControl_FREE_FOR_PERSONAL_USE_ONLY.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Swis";
+  src: url("../webfonts/SWISSE.TTF") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -33,7 +41,11 @@ Font Variable
 }
 
 :root {
-  --uc-brand-font: "GroundControl", sans-serif ;
+  --uc-brand-font: "GroundControl", sans-serif;
+}
+
+:root {
+  --uc-brand-font: "Swis", sans-serif;
 }
 
 /*==================================
@@ -140,5 +152,3 @@ Theme Color All Codes Variable
 :root {
   --uc-dark-color-rgba: 24, 26, 29;
 }
-
-
