@@ -32,6 +32,8 @@
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/control.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
   </head>
   <body class="about-page">
     <div class="preloader">
@@ -248,12 +250,16 @@
           <div
             class="row justify-content-lg-start justify-content-xl-center align-items-center"
           >
-            <div class="col-xxl-4 col-xl-5 col-lg-4 mb-5 mb-xl-0">
+            <div class="col-xxl-4 col-xl-5 col-lg-4 mb-5 mb-xl-0" data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-sine">
               <div class="about-us-img-wrap position-relative">
                 <img src="assets/images/real-estate-template-13.jpg" alt="" />
               </div>
             </div>
-            <div class="col-xl-7">
+            <div class="col-xl-7" data-aos="fade-left"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-sine">
               <div class="row mb-4">
                 <div class="col-12">
                   <h3 class="ls-1 mb-4" style="color: #aa8453;">
@@ -729,6 +735,12 @@
         const scale = 1 + scrollY * 0.0005; // adjust for smoothness
         banner.style.transform = `scale(${scale})`;
       });
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      AOS.init();
     </script>
   </body>
 </html>

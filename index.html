@@ -35,7 +35,7 @@
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/control.css" />
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <style>
       .text-slider {
         width: 100%;
@@ -998,12 +998,16 @@
           <div
             class="row justify-content-lg-start justify-content-xl-center align-items-center"
           >
-            <div class="col-xxl-4 col-xl-5 col-lg-4 mb-5 mb-xl-0">
+            <div class="col-xxl-4 col-xl-5 col-lg-4 mb-5 mb-xl-0" data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-sine">
               <div class="about-us-img-wrap position-relative">
                 <img src="assets/images/real-estate-template-13.jpg" alt="" />
               </div>
             </div>
-            <div class="col-xl-7">
+            <div class="col-xl-7" data-aos="fade-left"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-sine">
               <div class="row mb-4">
                 <div class="col-12">
                   <span
@@ -2438,7 +2442,9 @@
                 class="tagline bg-secondary color-white px-2 ls-2 fw-medium mb-3 d-table mx-auto"
                 >Testimonial</span
               >
-              <h3 class="color-dark ls-1 mb-5 fs-4 mx-auto text-center fw-medium">
+              <h3
+                class="color-dark ls-1 mb-5 fs-4 mx-auto text-center fw-medium"
+              >
                 What Client Says About Us
               </h3>
             </div>
@@ -2565,7 +2571,7 @@
                       </div>
                     </div>
 
-                     <div class="quote-icon d-flex justify-content-end">
+                    <div class="quote-icon d-flex justify-content-end">
                       <img src="assets/images/right-quote.png" alt="" />
                     </div>
                   </div>
@@ -2829,6 +2835,12 @@
             filterSection.style.display === "none" ? "block" : "none";
         });
       });
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      AOS.init();
     </script>
   </body>
 </html>
