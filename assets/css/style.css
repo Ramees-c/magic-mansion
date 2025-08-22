@@ -238,12 +238,12 @@ blockquote {
 
 .sub-title {
   font-family: var(--uc-primary-font);
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 500;
   letter-spacing: 1px;
   display: inline-block;
   width: 100%;
-  line-height: 28px;
+  line-height: 24px;
 }
 
 .paraxify {
@@ -2725,6 +2725,38 @@ body.no-scroll {
   will-change: transform;
 }
 
+.service-section {
+  padding: 60px 0;
+}
+.service-card {
+  margin-bottom: 50px;
+}
+.service-text h4 {
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: 27px;
+  font-weight: bold;
+}
+.service-text p {
+  font-size: 16px;
+  color: #444;
+}
+.service-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #d9534f;
+  font-weight: 500;
+  text-decoration: none;
+}
+.service-link:hover {
+  text-decoration: underline;
+}
+.service-img img {
+  border-radius: 6px;
+  width: 100%;
+  height: auto;
+}
+
 /*==========================================================
 Responsive Code
 ==========================================================*/
@@ -2826,6 +2858,11 @@ Responsive Code
     font-size: 30px;
   }
 
+  .service-heading {
+    line-height: 26px;
+    font-size: 22px;
+  }
+
   .custom-video-banner {
     height: 80vh;
   }
@@ -2838,6 +2875,22 @@ Responsive Code
   .blog-card-img {
     height: auto;
     width: 100%;
+  }
+
+  .sub-title {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    display: inline-block;
+    width: 100%;
+    line-height: 24px;
+  }
+
+  .service-text h4 {
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: bold;
   }
 
   .member-block-1 {
