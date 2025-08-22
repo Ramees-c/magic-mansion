@@ -2774,12 +2774,19 @@ Responsive Code
   .box-hover-bottom-line .entry-wrapper.fourth-one {
     height: 350px;
   }
+
+  
 }
 
 @media screen and (max-width: 1024px) {
   .box-hover-bottom-line .entry-wrapper {
     height: auto;
   }
+
+  .inner-page-banner {
+    height: 40vh;
+  }
+  
 }
 
 /* iPad Pro 12.9" Portrait & Landscape */
@@ -2788,6 +2795,7 @@ Responsive Code
   .single-propery-silid-section {
     margin-top: -210px;
   }
+  
 }
 
 @media screen and (min-width: 992px) {
