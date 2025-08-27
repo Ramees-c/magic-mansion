@@ -24,6 +24,12 @@
       rel="stylesheet"
     />
 
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
     <!--  CSS Style -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/all.min.css" />
@@ -33,7 +39,99 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/control.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  </head>
+
+    <style>
+      :root {
+        --accent: #aa8453;
+      }
+
+      .service-card {
+        background: #fff;
+        border-radius: 8px;
+        padding: 60px 20px 30px;
+        text-align: center;
+        position: relative;
+        overflow: visible; /* keep icon visible */
+        /* IMPORTANT: remove any border-bottom you had before */
+        -webkit-transition: all 300ms ease-in-out 0s;
+        -moz-transition: all 300ms ease-in-out 0s;
+        transition: all 300ms ease-in-out 0s;
+        border: 1px solid;
+        border-color: var(--uc-light-gray-color);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        height: 280px;
+      }
+
+      /* .service-card:hover {
+       
+      } */
+
+      /* Animated bottom line (center -> edges) */
+      .service-card::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 4px;
+        background: var(--accent);
+        border-radius: 2px;
+        transform: scaleX(0);
+        transform-origin: center; /* grow from center */
+        transition: transform 0.45s ease; /* smooth */
+        will-change: transform;
+      }
+      .service-card:hover::after {
+        transform: scaleX(1);
+        box-shadow: 0 70px 70px rgba(0, 0, 0, 0.2);
+      }
+
+      .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+      }
+
+      .service-icon {
+        width: 80px;
+        height: 80px;
+        background: var(--accent);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        font-size: 36px;
+        position: absolute;
+        top: -40px;
+        left: 50%;
+        transform: translateX(-50%);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      }
+      .service-icon img {
+        width: 40px; /* control size */
+        height: 40px; /* control size */
+        object-fit: contain;
+      }
+
+      .service-card h5 {
+        font-weight: 800;
+        margin: 10px 0 15px;
+      }
+      .service-card p {
+        margin: 0;
+      }
+
+      /* Optional: respect reduced motion */
+      @media (prefers-reduced-motion: reduce) {
+        .service-card,
+        .service-card::after {
+          transition: none;
+        }
+        .service-card:hover {
+          transform: none;
+        }
+      }
+    </style>
   </head>
   <body class="about-page">
     <div class="preloader">
@@ -250,19 +348,25 @@
           <div
             class="row justify-content-lg-start justify-content-xl-center align-items-center"
           >
-            <div class="col-xxl-4 col-xl-5 col-lg-4 mb-5 mb-xl-0" data-aos="fade-right"
+            <div
+              class="col-xxl-4 col-xl-5 col-lg-4 mb-5 mb-xl-0"
+              data-aos="fade-right"
               data-aos-duration="1000"
-              data-aos-easing="ease-in-sine">
+              data-aos-easing="ease-in-sine"
+            >
               <div class="about-us-img-wrap position-relative">
                 <img src="assets/images/real-estate-template-13.jpg" alt="" />
               </div>
             </div>
-            <div class="col-xl-7" data-aos="fade-left"
-              data-aos-duration="1000"
-              data-aos-easing="ease-in-sine">
-              <div class="row mb-4">
+            <div class="col-xl-7">
+              <div
+                class="row mb-4"
+                data-aos="fade-left"
+                data-aos-duration="1000"
+                data-aos-easing="ease-in-sine"
+              >
                 <div class="col-12">
-                  <h3 class="ls-1 mb-4" style="color: #aa8453;">
+                  <h3 class="ls-1 mb-4" style="color: #aa8453">
                     Empowering Your Property Journey with Trust, Transparency,
                     and Expertise.
                   </h3>
@@ -306,7 +410,12 @@
       <div class="full-row pt-0">
         <div class="container">
           <div class="row row-cols-xl-2 row-cols-md-1 row-cols-1 g-4">
-            <div class="col">
+            <div
+              class="col"
+              data-aos="fade-right"
+              data-aos-duration="500"
+              data-aos-easing="ease-in-sine"
+            >
               <div class="box-hover-bottom-line">
                 <div class="entry-wrapper first-one">
                   <div class="entry-thumbnail">
@@ -427,6 +536,58 @@
           </div>
         </div>
       </div>
+      <section class="py-5">
+        <div class="container">
+          <div class="row g-4">
+            <!-- Vision -->
+            <div class="col-md-4">
+              <div class="service-card">
+                <div class="service-icon">
+                  <img src="assets/images/visions.png" alt="" />
+                </div>
+                <h5>Our Vision</h5>
+                <p>
+                  To make property ownership and investment a clear, rewarding,
+                  and confident journey by providing exceptional service and
+                  trusted guidance to every client we serve.
+                </p>
+              </div>
+            </div>
+
+            <!-- Mission -->
+            <div class="col-md-4">
+              <div class="service-card">
+                <div class="service-icon">
+                  <img src="assets/images/target.png" alt="" />
+                </div>
+                <h5>Our Mission</h5>
+                <p>
+                  To guide clients through the property market with expert
+                  insights, personalized advice, and seamless service, ensuring
+                  their real estate journey is secure, transparent, and aligned
+                  with their goals.
+                </p>
+              </div>
+            </div>
+
+            <!-- Values -->
+            <div class="col-md-4">
+              <div class="service-card">
+                <div class="service-icon">
+                  <img src="assets/images/diamond.png" alt="Our Values" />
+                </div>
+                <h5>Our Values</h5>
+                <p>
+                  We believe in integrity, transparency, and putting clients
+                  first. Our goal is to provide clear guidance, quality service,
+                  and build lasting relationships beyond a single deal.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <div
         class="full-row paraxify overlay-dark"
         style="
