@@ -2752,7 +2752,7 @@ body.no-scroll {
 .invest-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr); /* Desktop: 5 items */
-  gap: 30px;
+  gap: 50px;
   text-align: center;
   justify-items: center;
 }
