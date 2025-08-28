@@ -2749,31 +2749,43 @@ body.no-scroll {
   height: auto;
 }
 
-.invest-section .icon-box {
+.invest-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Desktop: 5 items */
+  gap: 30px;
+  text-align: center;
+  justify-items: center;
+}
+
+.invest-item {
+  max-width: 250px;
+}
+
+.invest-item .icon-box {
   background: white;
   border-radius: 50%;
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
-.invest-section .icon-box img {
-  width: 40px;
-  height: 40px;
+
+.invest-item .icon-box img {
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
 }
-.invest-section .invest-item {
-  margin-bottom: 40px;
-}
-.invest-section .invest-item p {
+
+.invest-item p {
   font-size: 1rem;
   font-weight: bold;
   margin: 0;
-  color: #ddd;
+  color: white;
   line-height: 20px;
 }
-
 /*==========================================================
 Responsive Code
 ==========================================================*/
@@ -2791,11 +2803,18 @@ Responsive Code
   .box-hover-bottom-line .entry-wrapper.fourth-one {
     height: 350px;
   }
+
+  .invest-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
 
 @media screen and (max-width: 1024px) {
   .box-hover-bottom-line .entry-wrapper {
     height: auto;
+  }
+  .invest-grid {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -2871,6 +2890,17 @@ Responsive Code
     font-size: 14px;
   }
 
+  .invest-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .invest-item p {
+    font-size: 0.7rem;
+    font-weight: bold;
+    margin: 0;
+    color: white;
+    line-height: 18px;
+  }
+
   .page-title {
     font-size: 30px;
   }
@@ -2923,7 +2953,7 @@ Responsive Code
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 20px;
+    margin: 0 auto 10px;
   }
 
   .member-block-1 {
@@ -3043,6 +3073,13 @@ Responsive Code
   }
 }
 
+/* iPad Air Portrait (820px wide) */
+@media only screen and (min-device-width: 820px) and (max-device-width: 820px) and (orientation: portrait) {
+  .invest-grid {
+    grid-template-columns: repeat(4, 1fr); /* Example: 4 items per row */
+  }
+}
+
 @media screen and (max-width: 767px) {
   .single-property-details,
   .single-property-description {
@@ -3104,6 +3141,12 @@ Responsive Code
 
   .entry-single-title {
     font-size: 15px;
+  }
+}
+
+@media only screen and (min-device-width: 912px) and (max-device-width: 912px) and (orientation: portrait) {
+  .invest-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
