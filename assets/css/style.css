@@ -2850,6 +2850,7 @@ body.no-scroll {
 .service-card p {
   margin: 0;
   line-height: 25px;
+  font-size: 17px;
 }
 
 /* Optional: respect reduced motion */
@@ -2862,7 +2863,6 @@ body.no-scroll {
     transform: none;
   }
 }
-
 
 .vision-bg {
   height: 600px;
@@ -2888,6 +2888,7 @@ Responsive Code
   .invest-grid {
     grid-template-columns: repeat(5, 1fr);
   }
+
 }
 
 @media screen and (max-width: 1024px) {
@@ -2897,6 +2898,26 @@ Responsive Code
   .invest-grid {
     grid-template-columns: repeat(4, 1fr);
   }
+
+  .service-card {
+  background: var(--uc-light-gray-color);
+  /* border-radius: 8px; */
+  padding: 60px 20px 30px;
+  text-align: center;
+  position: relative;
+  overflow: visible; /* keep icon visible */
+  /* IMPORTANT: remove any border-bottom you had before */
+  -webkit-transition: all 300ms ease-in-out 0s;
+  -moz-transition: all 300ms ease-in-out 0s;
+  transition: all 300ms ease-in-out 0s;
+  height: 290px;
+}
+
+.service-card p {
+  margin: 0;
+  line-height: 23px;
+  font-size: 15px;
+}
 }
 
 /* iPad Pro 12.9" Portrait & Landscape */
@@ -3012,6 +3033,10 @@ Responsive Code
     display: inline-block;
     width: 100%;
     line-height: 24px;
+  }
+
+  .vision-bg {
+    height: 400px;
   }
 
   .service-text h4 {
